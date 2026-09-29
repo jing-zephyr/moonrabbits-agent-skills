@@ -1,0 +1,47 @@
+# NVIDIA RAPIDS cuVS 在 DGX Spark 上的实装证据（2026-09-29 实测）
+
+## 一、安装方式（节点 DGX Spark GB10 / aarch64）
+
+```bash
+python3 -m venv ~/venv-raft
+~/venv-raft/bin/pip install --index-url https://pypi.tuna.tsinghua.edu.cn/simple cuvs-cu12
+```
+
+> 说明：官方 NIM 容器走 nvcr.io 受区域限制（HTTP 451），故 cuVS 改走 pip 镜像通道安装 —— 绕开受限通道，不是绕开官方组件。
+
+## 二、导入验证（节点实际输出）
+
+```
+~/venv-raft/bin/python -c "import cuvs; print(cuvs.__version__)"
+→ 26.08.01
+```
+
+## 三、pip freeze 关键条目（原始输出摘录）
+
+```
+cuda-bindings==12.9.9
+cuda-pathfinder==1.8.2
+cuda-toolkit==12.9.2.0
+cuvs-cu12==26.8.1
+libcuvs-cu12==26.8.1
+libraft-cu12==26.8.0
+nvidia-cuda-nvrtc-cu12==12.9.86
+pylibraft-cu12==26.8.0
+```
+
+## 四、节点环境（同期采集）
+
+```
+name, memory.total [MiB], driver_version
+NVIDIA GB10, [N/A], 580.142
+```
+
+## 五、如实说明（不夸大）
+
+- ✅ **已实装、已导入成功**：版本号 26.08.01 来自节点实际运行输出，pip freeze 可复核；
+- ⚠️ **高层 CAGRA 检索基准未跑通**：cuVS 26.08 将算法 API 从基础包拆出（`cuvs` 命名空间为空，`pylibcuvs` 未随包分发），时间盒内未继续追装；
+- 因此本项定位为「**官方 GPU 向量库在 DGX Spark 实装成功**」，**不宣称**"已完成 45,225 条向量检索加速"。
+
+---
+
+*灵兔文脉 MoonRabbits · zephyr 队 · 第三届 NVIDIA DGX Spark 黑客松*
