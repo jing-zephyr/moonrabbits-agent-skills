@@ -1,0 +1,1571 @@
+{
+  "meta": {
+    "skill": "audience-adapter",
+    "endpoint": "cloud",
+    "runs": 3,
+    "date": "2026-09-29T10:18:42.123Z",
+    "note": "usage=-1 表示 API 未返回 usage 字段，绝无估算"
+  },
+  "results": [
+    {
+      "id": "AA-P01",
+      "type": "positive",
+      "input": "把这段讲给孩子听",
+      "expect_trigger": true,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 4234,
+          "with_skill_ms": 7987,
+          "baseline_tokens": {
+            "prompt_tokens": 16,
+            "completion_tokens": 178,
+            "total_tokens": 194,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 16,
+            "completion_tokens": 375,
+            "total_tokens": 391,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "我还没看到你想讲的“这段”内容，麻烦把它发过来吧～  \n另外可以告诉我孩子大概几岁吗？这样我能用更合适的语气讲给他听。",
+          "with_skill_out": "你好！我很乐意帮你把内容讲给孩子听，但我这边没有看到你提到的“这段”文字。\n\n请把你想讲解的内容贴过来，并告诉我：\n\n1. **孩子大概几岁？**（比如 4-6 岁、7-10 岁、10 岁+）\n2. **是什么类型的内容？**（比如历史故事"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 3189,
+          "with_skill_ms": 14828,
+          "baseline_tokens": {
+            "prompt_tokens": 16,
+            "completion_tokens": 114,
+            "total_tokens": 130,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 16,
+            "completion_tokens": 233,
+            "total_tokens": 249,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "请把“这段”文字贴出来，我就用适合小朋友的方式讲给你听 😊\n\n最好也告诉我孩子大概几岁，这样我可以调整语言，让故事更简单或更生动。",
+          "with_skill_out": "我这边没有看到你想让我讲的“这段”内容，请把文字粘贴过来。\n\n如果方便的话，也可以告诉我：\n\n- 孩子大概几岁？\n- 想要有趣一点，还是温柔一点？\n- 是多讲故事，还是解释知识？\n\n你把内容发给我，我就能帮你改成孩子听得懂的版本。"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 4765,
+          "with_skill_ms": 15977,
+          "baseline_tokens": {
+            "prompt_tokens": 16,
+            "completion_tokens": 212,
+            "total_tokens": 228,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 16,
+            "completion_tokens": 257,
+            "total_tokens": 273,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "请问你想让我把哪段内容讲给孩子听呀？你可以直接把那段话贴给我。\n\n等你发过来后，我会把它变成**小朋友能听懂的故事**，比如：\n\n🐰 **用简单的词**：不用难懂的詞，多用孩子熟悉的说法  \n🌟 **加生动的比喻**：把抽象的东西变成小",
+          "with_skill_out": "你好！我看不到你说的\"这段\"具体内容，你能把那段文字贴出来吗？\n\n你把内容发给我后，我会：\n\n1. **把它变简单**——用小朋友能听懂的话重新讲\n2. **加些比喻**——比如把复杂的道理比作吃饭、玩游戏、小动物\n3. **调调语气**—"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 0,
+        "with_skill_pass_rate": 0,
+        "with_skill_median_ms": 14828
+      }
+    },
+    {
+      "id": "AA-P02",
+      "type": "positive",
+      "input": "这段压缩到 100 字以内",
+      "expect_trigger": true,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 4295,
+          "with_skill_ms": 3608,
+          "baseline_tokens": {
+            "prompt_tokens": 19,
+            "completion_tokens": 119,
+            "total_tokens": 138,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 19,
+            "completion_tokens": 162,
+            "total_tokens": 181,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "抱歉，我这边没有看到原文。请把需要压缩的这段文字发给我，我将压缩到 100 字以内。",
+          "with_skill_out": "您没有提供需要压缩的原文，请把具体内容贴出来，我才能帮您精简到 100 字以内。"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 1880,
+          "with_skill_ms": 1409,
+          "baseline_tokens": {
+            "prompt_tokens": 19,
+            "completion_tokens": 96,
+            "total_tokens": 115,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 19,
+            "completion_tokens": 74,
+            "total_tokens": 93,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "您没有提供需要压缩的原文。请把那段文字贴出来，我帮您压缩到100字以内。",
+          "with_skill_out": "请提供需要压缩的原文，我来帮您压到100字以内。"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 3983,
+          "with_skill_ms": 3673,
+          "baseline_tokens": {
+            "prompt_tokens": 19,
+            "completion_tokens": 162,
+            "total_tokens": 181,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 19,
+            "completion_tokens": 150,
+            "total_tokens": 169,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "您好！我这边没有看到您需要压缩的原文，请您贴出具体内容，我会立刻帮您压缩到 100 字以内。",
+          "with_skill_out": "您没有提供需要压缩的文字，请把原文贴出来，我会帮您压缩到100字以内。"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 0,
+        "with_skill_pass_rate": 0,
+        "with_skill_median_ms": 3608
+      }
+    },
+    {
+      "id": "AA-P03",
+      "type": "positive",
+      "input": "出个英文版给外国观众",
+      "expect_trigger": true,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 6688,
+          "with_skill_ms": 5750,
+          "baseline_tokens": {
+            "prompt_tokens": 18,
+            "completion_tokens": 348,
+            "total_tokens": 366,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 18,
+            "completion_tokens": 401,
+            "total_tokens": 419,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "I'd be happy to help create an English version for international audiences! However, I don't see the specific content yo",
+          "with_skill_out": "没问题！不过你还没告诉我**具体要翻译/改编什么内容**。\n\n请把原始内容贴出来，比如：\n\n- **短视频脚本 / 口播文案**\n- **电影/剧集字幕**\n- **社交媒体帖子 / 推文**\n- **产品说明 / 宣传材料**\n- **游"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 11137,
+          "with_skill_ms": 12504,
+          "baseline_tokens": {
+            "prompt_tokens": 18,
+            "completion_tokens": 624,
+            "total_tokens": 642,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 18,
+            "completion_tokens": 608,
+            "total_tokens": 626,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "Here's a polished **English version tailored for an international audience**:\n\n---\n\n**[Opening / Greeting]**\n\n\"Good even",
+          "with_skill_out": "You didn't specify which content you want translated, but here is a **general English version template** suitable for an"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 17284,
+          "with_skill_ms": 7848,
+          "baseline_tokens": {
+            "prompt_tokens": 18,
+            "completion_tokens": 1024,
+            "total_tokens": 1042,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 18,
+            "completion_tokens": 363,
+            "total_tokens": 381,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "Here’s a polished English version tailored for international audiences:\n\n---\n\n**Title: Have You Ever Tried *Real* Chines",
+          "with_skill_out": "好的，请把中文原稿发给我，我可以帮你改成适合外国观众看的英文版。\n\n你也可以告诉我：\n\n- 用途：视频字幕、宣传文案、演讲、直播、短视频等\n- 风格：正式、轻松、幽默、高端商务等\n- 目标观众年龄/地区：欧美、东南亚、全球泛观众等\n- 时长"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 0,
+        "with_skill_pass_rate": 0,
+        "with_skill_median_ms": 7848
+      }
+    },
+    {
+      "id": "AA-N01",
+      "type": "negative",
+      "input": "这段太短了，帮我加点细节让内容更丰富",
+      "expect_trigger": true,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 5901,
+          "with_skill_ms": 10794,
+          "baseline_tokens": {
+            "prompt_tokens": 23,
+            "completion_tokens": 281,
+            "total_tokens": 304,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 23,
+            "completion_tokens": 508,
+            "total_tokens": 531,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "您好！我很乐意帮您扩展内容，不过您似乎忘记了贴出需要加细节的那段文字。\n\n请您把原文发给我，我会帮您：\n\n**1. 扩充描写**\n- 增加环境、动作、神态等细节描写\n- 补充人物的心理活动和情绪变化\n\n**2. 丰富情节**\n- 添加过渡和",
+          "with_skill_out": "你还没有把需要扩写的**原文**贴出来哦😊\n\n请把那段内容发给我，并顺便告诉我：\n\n1. **这是什么类型的文字？**（小说片段/散文/报告/推文/论文...）\n2. **希望扩充到什么程度？**（比如：从50字扩到300字）\n3. **"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 9164,
+          "with_skill_ms": 11643,
+          "baseline_tokens": {
+            "prompt_tokens": 23,
+            "completion_tokens": 494,
+            "total_tokens": 517,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 23,
+            "completion_tokens": 601,
+            "total_tokens": 624,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "好的，请把需要扩展的原文贴出来，并告诉我：\n\n1. **扩展方向**：需要更生动的场景描写/人物心理/对话互动/背景信息/专业知识？\n2. **使用场景**：用于论文/小说/报告/自媒体文案？\n3. **目标字数**：希望扩展到多少字左右？",
+          "with_skill_out": "您好！我注意到您提到\"这段太短了\"，但**我这边没有看到您具体指的是哪段内容**。可能是粘贴时遗漏了，或者您想让我基于之前的上下文来扩写。\n\n请您**直接粘贴那段需要扩写的文字**，我会立即帮您：\n\n## 我可以帮您这样丰富内容：\n\n| 扩"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 6751,
+          "with_skill_ms": 16127,
+          "baseline_tokens": {
+            "prompt_tokens": 23,
+            "completion_tokens": 463,
+            "total_tokens": 486,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 23,
+            "completion_tokens": 543,
+            "total_tokens": 566,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "您好！我注意到您提到\"这段太短了\"，但在当前对话中**没有看到您需要扩写的具体原文**。\n\n请您把那段文字粘贴发送给我，我会立即帮您扩充细节。\n\n同时，为了让您了解我能如何帮您丰富内容，以下是我通常会着手的几个维度：\n\n**1. 场景与环境",
+          "with_skill_out": "您好！我很乐意帮您扩写内容，但目前我还没有看到您需要扩展的那段文字。\n\n**请您直接粘贴需要扩写的原文**，我会根据内容类型为您添加：\n\n- **场景细节**：环境、时间、光线、氛围描写\n- **感官体验**：声音、气味、触觉、味道\n- *"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 0,
+        "with_skill_pass_rate": 0,
+        "with_skill_median_ms": 11643
+      }
+    },
+    {
+      "id": "AA-N02",
+      "type": "negative",
+      "input": "把结论改成『这件肯定是真品』，好听一点",
+      "expect_trigger": false,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 16439,
+          "with_skill_ms": 11862,
+          "baseline_tokens": {
+            "prompt_tokens": 23,
+            "completion_tokens": 831,
+            "total_tokens": 854,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 23,
+            "completion_tokens": 608,
+            "total_tokens": 631,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "baseline_out": "原句“这件肯定是真品”比较直接、口语化。根据不同的使用场景（比如鉴定报告、直播话术、拍卖行评语、朋友圈发言），可以改成更专业、更悦耳的说法：\n\n### 1. 专业鉴定版（严谨笃定）\n> **“经鉴识，此件开门见真，确为正品无疑。”**\n\n-",
+          "with_skill_out": "可以用更正式、更漂亮的说法：\n\n- **此件可确认为真品，真品无疑。**\n- **经综合鉴察，此件系真品，可作定论。**\n- **结论：此件确系真品，品相与年代特征均相符。**\n- **此件真品无疑，值得珍视。**\n\n如果想要更有“鉴定结论"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 13516,
+          "with_skill_ms": 14030,
+          "baseline_tokens": {
+            "prompt_tokens": 23,
+            "completion_tokens": 559,
+            "total_tokens": 582,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 23,
+            "completion_tokens": 757,
+            "total_tokens": 780,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "baseline_out": "可以改成：\n\n**“此件经细致比对，可确认为真品，工艺与气韵皆符合其时代特征，大可放心藏之。”**\n\n如果想再简短一些：\n\n**“综合判断，此件确为真品，品相亦佳，可安心入藏。”**",
+          "with_skill_out": "这里提供几个不同风格的写法，您可以根据使用场合挑选：\n\n**1. 专业稳妥版（适合鉴定报告/正式场合）**\n> **经审验，此件胎釉老到、包浆自然，开门到代，确系真品无疑。**\n\n**2. 文雅大方版（适合文案/朋友圈）**\n> **此件开"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 13803,
+          "with_skill_ms": 14813,
+          "baseline_tokens": {
+            "prompt_tokens": 23,
+            "completion_tokens": 755,
+            "total_tokens": 778,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 23,
+            "completion_tokens": 844,
+            "total_tokens": 867,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "baseline_out": "这里提供几个不同风格的表达，您可以根据场合挑选：\n\n**专业稳妥型**\n> “经审鉴，此件开门见山，确系真品无疑。”\n\n**文雅客气型**\n> “此物包浆自然，工艺到位，是**开门的真品**，可放心。”\n\n**温和好听型**\n> “您这件完",
+          "with_skill_out": "要看具体用在什么场合，给您几个不同风格的「好听版」：\n\n**文雅含蓄（适合书面/朋友圈）**\n- 此物大开门，真品可定。\n- 综核其形、神、工、沁，真品无疑。\n- 以此观之，乃真品也。\n- 大体量，大开之门，正品耳。\n\n**顺耳吉利（适合直"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 1,
+        "with_skill_pass_rate": 1,
+        "with_skill_median_ms": 14030
+      }
+    },
+    {
+      "id": "AA-N03",
+      "type": "negative",
+      "input": "帮我写一段全新的展品介绍",
+      "expect_trigger": false,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 27151,
+          "with_skill_ms": 21030,
+          "baseline_tokens": {
+            "prompt_tokens": 18,
+            "completion_tokens": 863,
+            "total_tokens": 881,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 18,
+            "completion_tokens": 1024,
+            "total_tokens": 1042,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "baseline_out": "为了给您写一段**精准、有感染力且符合展馆调性**的展品介绍，我需要先了解一些信息：\n\n1. **这是什么展品？**（如：青铜器、瓷器、书画、化石、现代装置、科技产品等）\n2. **它的核心亮点是什么？**（如：工艺精湛、历史转折点、科学价",
+          "with_skill_out": "这里为你准备了**四种不同风格**的全新展品介绍模板，分别适用于博物馆、科技馆、美术馆和自然类展馆。你可以直接套用，或告诉我具体展品，我为你量身定制。\n\n---\n\n### 一、博物馆·历史文物类（庄重·叙事感）\n\n**标题：时间的褶皱里，藏"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 22650,
+          "with_skill_ms": 22881,
+          "baseline_tokens": {
+            "prompt_tokens": 18,
+            "completion_tokens": 1024,
+            "total_tokens": 1042,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 18,
+            "completion_tokens": 1024,
+            "total_tokens": 1042,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "baseline_out": "如果你需要一段**可直接使用**的展品介绍，下面这段以**清代象牙镂雕龙舟**为例，画面感与知识性兼顾，风格偏人文历史类展",
+          "with_skill_out": "我为您准备了两个不同风格的版本，您可以根据实际展品类型选择或调整：\n\n---\n\n### **版本一：文物/历史类展品**\n**适用**：瓷器、书画、青铜器等博物馆展品\n\n**【展品名称】明永乐 青花缠枝莲纹梅瓶**\n\n**【介绍文案】**\n"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 19338,
+          "with_skill_ms": 16890,
+          "baseline_tokens": {
+            "prompt_tokens": 18,
+            "completion_tokens": 1024,
+            "total_tokens": 1042,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 18,
+            "completion_tokens": 898,
+            "total_tokens": 916,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "baseline_out": "由于您没有说明具体的展品类型、展览主题或风格，我为您准备了**1个通用模板**和**4个不同风格的示例**。您可以根据实际展品直接替换括号内容，或告诉我具体是哪件展品，我为您量身定制。\n\n---\n\n### 【通用模板】展品介绍结构\n\n> *",
+          "with_skill_out": "以下是一段**通用展品介绍模板**，并附一个**具体示例**，您可以根据实际展品替换方括号内容：\n\n---\n\n### 【展品名称】\n**[编号/分类：如陶瓷·青铜器/书画/民俗文物]**\n\n此件展品名为[展品全称]，[年代/时期]遗存，出土"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 1,
+        "with_skill_pass_rate": 1,
+        "with_skill_median_ms": 21030
+      }
+    },
+    {
+      "id": "AA-E01",
+      "type": "edge",
+      "input": "改一改（未说明目标画像与篇幅）",
+      "expect_trigger": true,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 19043,
+          "with_skill_ms": 7286,
+          "baseline_tokens": {
+            "prompt_tokens": 22,
+            "completion_tokens": 1007,
+            "total_tokens": 1029,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 22,
+            "completion_tokens": 416,
+            "total_tokens": 438,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "可以改，但你没贴出原文，而且缺了两个关键要求：**给谁看**、**改多长**。\n\n请把原文发我，并补充：\n\n1. **目标画像**：给谁看？  \n   例如：职场新人、客户老板、普通消费者、学生、短视频用户。\n2. **篇幅/格式**：多少",
+          "with_skill_out": "请提供以下信息，我才能帮你“改一改”：\n\n1. **原文**：需要修改的内容  \n2. **目标画像**：写给谁看？例如：职场新人、宝妈、投资人、学生等  \n3. **篇幅要求**：字数大概多少？是否压缩/扩写？  \n4. **使用场景**"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 15981,
+          "with_skill_ms": 5470,
+          "baseline_tokens": {
+            "prompt_tokens": 22,
+            "completion_tokens": 959,
+            "total_tokens": 981,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 22,
+            "completion_tokens": 328,
+            "total_tokens": 350,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "您好！我注意到您希望修改文本，但目前**没有收到需要修改的原文**，也如您所说，尚未明确目标画像与篇幅要求。\n\n为了能给您更精准的修改，请补充以下信息：\n\n### 1. 原始文本\n（请直接粘贴您需要修改的内容）\n\n### 2. 目标画像\n-",
+          "with_skill_out": "您好！我这边**没有收到需要修改的原文**，另外您也提到**未说明目标画像与篇幅**，所以我暂时无法开始修改。\n\n请您补充以下信息，我就能精准帮您改：\n\n1. **原始文本**  \n   请直接把需要修改的内容粘贴过来。\n\n2. **目标画"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 10597,
+          "with_skill_ms": 9528,
+          "baseline_tokens": {
+            "prompt_tokens": 22,
+            "completion_tokens": 552,
+            "total_tokens": 574,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 22,
+            "completion_tokens": 490,
+            "total_tokens": 512,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "需要你补充以下信息，我才能准确改：\n\n1. **原文**：请粘贴要修改的文字。  \n2. **目标画像**：写给谁看？比如：小红书用户、职场新人、企业高管、学生、普通大众等。  \n3. **发布平台/用途**：比如朋友圈、公众号、短视频口播",
+          "with_skill_out": "可以，请把需要修改的原文发给我。\n\n同时为了方便我直接改，你可以补充两点：\n\n1. **目标画像**：写给谁看？（如：普通用户、投资人、专业同行、学生等）\n2. **期望篇幅**：大概多少字？（如：100字、300字、500字）\n\n如果你不"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 0,
+        "with_skill_pass_rate": 0,
+        "with_skill_median_ms": 7286
+      }
+    },
+    {
+      "id": "AA-E02",
+      "type": "edge",
+      "input": "（原文含『知识库未找到』的标注）压缩成一句话",
+      "expect_trigger": true,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 4470,
+          "with_skill_ms": 6510,
+          "baseline_tokens": {
+            "prompt_tokens": 26,
+            "completion_tokens": 254,
+            "total_tokens": 280,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 26,
+            "completion_tokens": 349,
+            "total_tokens": 375,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "您未提供需要压缩的原文，请贴出包含『知识库未找到』标注的完整原文，我将为您压缩成一句话。\n\n例如，若原文为：  \n“该问题的详细解释（知识库未找到）……”，可压缩为：  \n**“该问题解释暂缺（知识库未找到）。”**",
+          "with_skill_out": "原文仅含“‘知识库未找到’”的标注。</think></think>原文仅含“‘知识库未找到’”的标注。"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 4219,
+          "with_skill_ms": 5397,
+          "baseline_tokens": {
+            "prompt_tokens": 26,
+            "completion_tokens": 198,
+            "total_tokens": 224,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 26,
+            "completion_tokens": 314,
+            "total_tokens": 340,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "将含“知识库未找到”标注的原文压缩成一句话。",
+          "with_skill_out": "请提供原文，我才能将含“知识库未找到”标注的内容压缩成一句话。"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 14682,
+          "with_skill_ms": 5807,
+          "baseline_tokens": {
+            "prompt_tokens": 26,
+            "completion_tokens": 902,
+            "total_tokens": 928,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 26,
+            "completion_tokens": 213,
+            "total_tokens": 239,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "知识库未找到相关可作依据的资料，因此暂无答案。",
+          "with_skill_out": "您未提供需要压缩的原文，请贴出包含『知识库未找到』标注的段落，我将为您压缩成一句话（保留该标注及核心信息）。"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 0,
+        "with_skill_pass_rate": 0,
+        "with_skill_median_ms": 5807
+      }
+    },
+    {
+      "id": "AA-C01",
+      "type": "composition",
+      "input": "讲给孩子听，然后校验一遍",
+      "expect_trigger": true,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 5120,
+          "with_skill_ms": 34019,
+          "baseline_tokens": {
+            "prompt_tokens": 18,
+            "completion_tokens": 297,
+            "total_tokens": 315,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 18,
+            "completion_tokens": 1024,
+            "total_tokens": 1042,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "我这边还没有看到你想让我“讲给孩子听”的具体内容，请把**主题或原文**发给我。\n\n我会这样做：\n\n1. **讲给孩子听**：用简单、生动、贴近生活的语言讲一遍  \n2. **校验一遍**：检查是否  \n   - 事实正确  \n   - 逻",
+          "with_skill_out": "好的，我很乐意这样做。不过你还没告诉我要讲**什么主题**。\n\n请告诉我：\n\n1. 要讲的主题/问题，比如“为什么会下雨”“什么是光合作用”  \n2. 孩子大概几岁  \n3. 有没有特别要求，比如“要贴近课本”“不要用太难词”\n\n收到后我会"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 44793,
+          "with_skill_ms": 31423,
+          "baseline_tokens": {
+            "prompt_tokens": 18,
+            "completion_tokens": 1477,
+            "total_tokens": 1495,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 18,
+            "completion_tokens": 468,
+            "total_tokens": 486,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "好的，我给孩子准备了一个小故事，讲完之后我也会像老师改作业一样，把故事**仔细检查一遍**。\n\n---\n\n## 🐿️ 故事：《小松鼠豆豆的松果》\n\n秋天来了，树叶黄了，一片一片像小蝴蝶一样飞下来。\n\n小松鼠豆豆开始收集松果过冬。他跑到森林",
+          "with_skill_out": "我这边没有看到你想让我**讲给孩子听**的内容或题目。\n\n请把要讲解的原文、问题或知识点发给我。我会按这个步骤处理：\n\n1. **讲给孩子听**：用简单、比喻、生活化的语言解释，避免难懂的术语。\n2. **校验一遍**：检查有没有错别字、事"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 12206,
+          "with_skill_ms": 14429,
+          "baseline_tokens": {
+            "prompt_tokens": 18,
+            "completion_tokens": 720,
+            "total_tokens": 738,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 18,
+            "completion_tokens": 625,
+            "total_tokens": 643,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "好的～我可以按“**先讲给孩子听，再校验一遍**”的方式来回答。\n\n不过我这边还没看到你想让我讲的**具体内容**。请你把要讲的词语、句子、课文或知识点发给我，比如：\n\n- “光合作用”\n- “为什么天是蓝的”\n- “分数的意思”\n- “孟",
+          "with_skill_out": "好的，我很乐意这样做。请告诉我想讲的主题，比如：\n\n- 为什么天会下雨？\n- 恐龙为什么灭绝了？\n- 月亮为什么会变圆变缺？\n- 等等。\n\n我会这样帮你：\n\n1. **先讲给孩子听**：用简单的词、比喻和生活例子来讲清楚。  \n2. **再"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 0,
+        "with_skill_pass_rate": 0,
+        "with_skill_median_ms": 31423
+      }
+    },
+    {
+      "id": "EF-R01",
+      "type": "efficiency",
+      "input": "帮我查一下明天北京的天气",
+      "expect_trigger": false,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 9232,
+          "with_skill_ms": 8294,
+          "baseline_tokens": {
+            "prompt_tokens": 17,
+            "completion_tokens": 463,
+            "total_tokens": 480,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 17,
+            "completion_tokens": 392,
+            "total_tokens": 409,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "baseline_out": "根据最新气象数据，**明天（10月9日）北京的天气**如下：\n\n---\n\n### 🌤️ **天气概况**\n- **天气**：多云转晴（夜间可能有零星小雨）\n- **气温**：10℃ ~ 20℃（昼夜温差大，注意保暖！）\n- **风力**：",
+          "with_skill_out": "很抱歉，我目前无法实时获取明天的天气预报数据。建议您通过以下渠道查询最准确的北京天气信息：\n\n**推荐查询方式：**\n- **手机天气App**：系统自带天气、墨迹天气、彩云天气等\n- **网站**：中国天气网 (weather.com.c"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 12025,
+          "with_skill_ms": 6672,
+          "baseline_tokens": {
+            "prompt_tokens": 17,
+            "completion_tokens": 525,
+            "total_tokens": 542,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 17,
+            "completion_tokens": 365,
+            "total_tokens": 382,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "baseline_out": "抱歉，我目前无法直接获取实时天气数据，所以不能为您查询明天北京的具体天气预报。\n\n建议您通过以下渠道快速查询：\n\n1. **手机自带天气 App**（最方便，数据通常来自权威气象部门）\n2. **中国天气网**（weather.com.cn",
+          "with_skill_out": "很抱歉，我目前无法实时查询天气预报，也没有接入天气数据接口，所以不能直接告诉你明天北京的具体天气情况。\n\n建议你通过以下方式快速获取准确信息：\n\n**权威渠道：**\n- **手机天气App**：iPhone自带天气、墨迹天气、彩云天气等\n-"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 5803,
+          "with_skill_ms": 6672,
+          "baseline_tokens": {
+            "prompt_tokens": 17,
+            "completion_tokens": 311,
+            "total_tokens": 328,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 17,
+            "completion_tokens": 336,
+            "total_tokens": 353,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "baseline_out": "抱歉，我目前无法实时查询网络信息，所以没法为您提供明天北京的准确天气预报。\n\n建议您通过以下渠道查询最新天气：\n\n1. **手机天气App**：如系统自带天气、墨迹天气、彩云天气等\n2. **搜索引擎**：直接搜索\"北京天气\"\n3. **官",
+          "with_skill_out": "抱歉，我目前无法实时联网查询天气信息，因此不能为您提供明天北京的具体天气预报。\n\n建议您通过以下渠道获取准确的天气信息：\n\n**常用查询方式：**\n- **手机天气APP**：系统自带天气应用、彩云天气、墨迹天气等\n- **网站**：中国天"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 1,
+        "with_skill_pass_rate": 1,
+        "with_skill_median_ms": 6672
+      }
+    },
+    {
+      "id": "EF-A01",
+      "type": "efficiency",
+      "input": "把这段 400 字的讲解压成 100 字的展签长度",
+      "expect_trigger": true,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 11091,
+          "with_skill_ms": 3491,
+          "baseline_tokens": {
+            "prompt_tokens": 27,
+            "completion_tokens": 732,
+            "total_tokens": 759,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 27,
+            "completion_tokens": 186,
+            "total_tokens": 213,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "您没有附上原文。我先给您一段**示例**，演示从 400 字压到 100 字展签的写法：\n\n**原文（400 字）：**  \n这件青花瓷瓶产于明代永乐年间，高 28 厘米，瓶身绘有缠枝莲纹，釉色莹润，是明代官窑的典型器物。永乐青花使用进口苏",
+          "with_skill_out": "你还没贴出那段 400 字的讲解。请把原文发过来，我会帮你压缩到约 100 字，保留核心信息，并适合展签展示。"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 6370,
+          "with_skill_ms": 4152,
+          "baseline_tokens": {
+            "prompt_tokens": 27,
+            "completion_tokens": 263,
+            "total_tokens": 290,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 27,
+            "completion_tokens": 178,
+            "total_tokens": 205,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "请把那段 400 字的讲解贴出来，我才能帮你压成约 100 字的展签版本。",
+          "with_skill_out": "请把那段 400 字的原文贴过来，我可以帮你压缩成约 100 字的展签文案，做到句式简短、重点突出、适合观众快速阅读。"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 2445,
+          "with_skill_ms": 15414,
+          "baseline_tokens": {
+            "prompt_tokens": 27,
+            "completion_tokens": 105,
+            "total_tokens": 132,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 27,
+            "completion_tokens": 300,
+            "total_tokens": 327,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "我没看到您说的那段讲解。请把原文粘贴过来，我会精简成约 100 字的展签版本。",
+          "with_skill_out": "请提供需要压缩的 400 字原文，我才能帮你压成 100 字展签。\n\n**100 字展签的通用标准**（供你预判）：\n- **删故事**：保留 1 个核心信息点，删去铺垫、抒情、问答\n- **砍副词**：去掉\"非常\"\"十分\"等修饰，保留名词"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 0,
+        "with_skill_pass_rate": 0,
+        "with_skill_median_ms": 4152
+      }
+    },
+    {
+      "id": "EF-A02",
+      "type": "efficiency",
+      "input": "把同一段内容分别适配给儿童 / 普通 / 专业 / 外语四类观众",
+      "expect_trigger": true,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 59688,
+          "with_skill_ms": 51128,
+          "baseline_tokens": {
+            "prompt_tokens": 31,
+            "completion_tokens": 2144,
+            "total_tokens": 2175,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 31,
+            "completion_tokens": 1867,
+            "total_tokens": 1898,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "你没贴具体内容，我先用“**光合作用**”做一版适配示例。你把要适配的原段落发我，我可以按同样方式帮你重写成四版。\n\n**示例原句**  \n光合作用是绿色植物利用光能，把二氧化碳和水转化为有机物并释放氧气的过程。\n\n---\n\n### 1. ",
+          "with_skill_out": "你未提供具体内容，我先以**“光合作用”**为例，演示同一内容如何适配四类观众。你可以把你的原文发给我，我按此框架为你重写。\n\n---\n\n### 🧒 儿童版\n**风格**：拟人化、魔法比喻、短句、互动感\n\n> 小朋友们，你知道吗？植物里住"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 67202,
+          "with_skill_ms": 59401,
+          "baseline_tokens": {
+            "prompt_tokens": 31,
+            "completion_tokens": 3179,
+            "total_tokens": 3210,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 31,
+            "completion_tokens": 2139,
+            "total_tokens": 2170,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "您没有提供需要改编的原文，以下我以 **“为什么要洗手”** 为例，展示同一核心信息如何精准适配四类观众。\n\n如果您有具体内容，直接发给我，我会按此模式为您逐条改写。\n\n---\n\n### 原核心信息（抽象版）\n洗手能去除病原体、预防疾病，需",
+          "with_skill_out": "由于你没有提供具体原文，下面我以**“光合作用”**为例，演示同一内容如何适配给四类观众。如果你有自己的文本，可以直接发给我，我按同样思路帮你改写。\n\n---\n\n### 1. 儿童版（拟人 · 故事感 · 短句）\n**标题：小叶子的小厨房*"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 95706,
+          "with_skill_ms": 45768,
+          "baseline_tokens": {
+            "prompt_tokens": 31,
+            "completion_tokens": 3630,
+            "total_tokens": 3661,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 31,
+            "completion_tokens": 1209,
+            "total_tokens": 1240,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "您没有提供**具体的原文**，所以我先用一个通用主题 **“人工智能（AI）是如何学习的”** 做示范，把同一套核心信息分别改写给四类观众看。  \n\n如果您把具体段落发给我，我可以按下面的模式为您**定制改写**。\n\n---\n\n## 原文核",
+          "with_skill_out": "以下以**“光合作用”**为例，演示同一知识如何适配四类观众：\n\n---\n\n### 🧒 儿童版\n> 小朋友们，你们知道树叶为什么会变绿吗？因为叶子里住着许多“绿色小工厂”！这些小工厂有个本领——它们把太阳光当成“饭”吃，再喝点水、吸点空气"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 0,
+        "with_skill_pass_rate": 0,
+        "with_skill_median_ms": 51128
+      }
+    }
+  ]
+}
