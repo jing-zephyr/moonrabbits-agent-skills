@@ -105,7 +105,7 @@ python skills-src/exhibit-narrative/scripts/verify_sources.py --input examples/c
 # 2. 知识库连通性自检（条数应接近 45,225；本机未装依赖时明确报"未安装"，绝不假装"库里没有"）
 python skills-src/exhibit-narrative/scripts/kb_search.py --self-check
 
-# 3. 官方与自研技能的完整性核对（官方 39 + 自研 30，0 mismatch）
+# 3. 官方与自研技能的完整性核对（官方 39 + 自研 37，0 mismatch）
 node scripts/verify-lock.mjs
 
 # 4. 推送前三道闸（密钥 / 官方文件改动 / 自研契约）
@@ -135,7 +135,7 @@ node scripts/pre-push-check.mjs
 入口端：`bamai` 把"非技术人的模糊想法"问清、拆活（苏格拉底式，最多六问）；主体端：叙事（产生）→ 适配（换表达）→ 校验（把关）；底座端：官方技能冻结装配（Skill 3）。`source-verifier` 不含领域知识，可挂到任何"不编造"的任务上。
 
 **3）负向用例优先的设计。**
-官方 Tier-3 要求任务集**必须包含负向用例**（正确答案是"不调用该 skill"的场景）。4 个核心技能共 **52 条用例**（16/13/12/11），其中 **12 条负向**（不该触发 / 越界拒答 / 拒绝打印密钥），另有 4 条 Efficiency 驻留用例正面测量官方点名的开放问题「Claude 常常不会主动触发 skill」。
+官方 Tier-3 要求任务集**必须包含负向用例**（正确答案是"不调用该 skill"的场景）。4 个核心技能共 **53 条用例**（16/13/12/12），其中 **12 条负向**（不该触发 / 越界拒答 / 拒绝打印密钥），另有 4 条 Efficiency 驻留用例正面测量官方点名的开放问题「Claude 常常不会主动触发 skill」。
 
 **4）确定性内核，而非纯提示词。**
 叙事链路的关键判定**不靠模型感觉**，由确定性规则锁定（`scripts/verify_sources.py`，纯函数、零网络、零随机）：
@@ -181,7 +181,7 @@ node scripts/pre-push-check.mjs
 | 优化点 | 做法 | 状态 |
 |---|---|---|
 | **上下文经济** | 三层渐进式披露：常驻仅 `name`+`description` ≈100 token/技能；官方原话「没有人会全装 343 个技能，按需安装 + 目录路由才是工程上的正确解」 | ✅ 已实施 |
-| **成本优化** | 轻量任务走本地模型（零 API 成本），重推理走云端；Step 5 Preview 官方口径「每任务成本比相近智能模型低约 65%」 | ✅ 已实测：本地 646 ms vs 云端 16.3 s（双端点同题对照，见 `evidence/`）；云端全量 53 例已跑 |
+| **成本优化** | 轻量任务走本地模型（零 API 成本），重推理走云端；Step 5 Preview 官方口径「每任务成本比相近智能模型低约 65%」 | ✅ 已实测：本地 451 ms vs 云端 16.0 s（双端点同题对照，见 `evidence/`）；云端全量 53 例已跑 |
 | **GB10 推理适配** | 必须 `VLLM_USE_DEEP_GEMM=0` + `--moe-backend triton`，否则 `CUDA_ERROR_INVALID_IMAGE` | ✅ 已验证 |
 | **推理模型 token 坑** | `step-5-preview` 给 `max_tokens=16` 时 token 全被 `reasoning` 吃掉 → `content` 为空；已固化为默认 1024 + 空了自动放大 4 倍重试 | ✅ 已验证 |
 | **检索质量** | 查询与入库必须同用 `bge-large-zh-v1.5`；库内 ASR 谐音脏数据用 fail-closed 缓解而非消除 | ✅ 已实施 |
@@ -279,7 +279,7 @@ openclaw skills list --eligible        # 官方验证命令
 |---|---|---|
 | 🟢 实跑 | `nvidia-skill-finder` | 官方目录路由：演示"在几百个里选对"的方法与技能命中日志 |
 | 🟢 实跑 | `skill-card-generator` | 官方治理卡片生成器（官方 demo 第 4 步同款工具；字段规范照此对齐） |
-| ✅ 已取得并验签 | **`rag-blueprint`**（官方 RAG 部署技能） | 官方 PPT《NVIDIA Skills 开发实战》**第 11–13 页**列为重点产品线第一条（"Docker Compose / Helm 一键部署全栈 RAG"，垂类场景＝企业知识库/智能客服）；官方用法 `npx skills add nvidia/skills --skill rag-blueprint --yes`。**已取得 36 个文件（SKILL.md + 25 份 references + eval + skill-card + 官方签名），NVIDIA 根证书验签 PASS**（证据：`evidence/rag-blueprint-verify.txt`）。我们的检索层与其架构一一对应（摄取/嵌入/检索/重排/评测）。⚠️ 部署本体**未实跑**：依赖 nvcr.io 容器（实测区域受限 451），如实标注 |
+| ✅ 已取得并验签 | **`rag-blueprint`**（官方 RAG 部署技能） | 官方 PPT《NVIDIA Skills 开发实战》**第 11–13 页**列为重点产品线第一条（"Docker Compose / Helm 一键部署全栈 RAG"，垂类场景＝企业知识库/智能客服）；官方用法 `npx skills add nvidia/skills --skill rag-blueprint --yes`。**已取得 38 个文件（SKILL.md + 32 份 references + eval + skill-card + 官方签名），NVIDIA 根证书验签 PASS**（证据：`evidence/rag-blueprint-verify.txt`）。我们的检索层与其架构一一对应（摄取/嵌入/检索/重排/评测）。⚠️ 部署本体**未实跑**：依赖 nvcr.io 容器（实测区域受限 451），如实标注 |
 | 🥈 冻结证据 | `tao-generate-image-grounding` · `tao-generate-referring-expressions` | 整目录冻结于 `vendor/`（锁 commit + sha256），证明"真比过、真筛过"；**不当主链路**（ARM64 容器未验证、单次 90–150 秒、搬不走） |
 | 🟡 方法对标 | `nemotron-retrieval-recipes` · `rag-eval` | 检索"embed 召回 → rerank 排序"与 RAGAS 评测方法学，写入 BENCHMARK 协议与答辩口径 |
 | 🔵 阶跃语音 | StepAudio Skills（StepFun 打包的 TTS/ASR） | 讲解语音：TTS 端点与模型名已通（`step-tts-mini`），官方 voice_id 列表未公开 → **如实标注"待验证"** |
@@ -333,7 +333,7 @@ openclaw skills list --eligible        # 官方验证命令
 | 帧 | 证据 | 状态 |
 |---|---|---|
 | **造得出** | 技能命中日志行（换第二件展品，一句话仍能触发） | ✅ 已录制并入片（B 站）；证据见 `evidence/frame1-local-*.txt` |
-| **换得动** | 本地 vLLM ↔ `api.stepfun.com` 双端点对照 | ✅ 已录制并入片（B 站）；同题实测：本地 646 ms 拒答「知识库未找到」vs 云端 16.3 s 通用回答，数据见 `evidence/frame2-双端点对照-20260929.json` |
+| **换得动** | 本地 vLLM ↔ `api.stepfun.com` 双端点对照 | ✅ 已录制并入片（B 站）；同题实测：本地 451 ms 拒答「知识库未找到」vs 云端 16.0 s 通用回答，数据见 `evidence/frame2-双端点对照-20260929.json` |
 | **信得过** | ① 官方 `model_signing verify` + 根证书：vendor 官方技能验签 **PASS → 篡改一字节 → FAILED（已实测）** ② 自研完整性锁 `verify-lock.mjs`（sha256，篡改即 FAILED，已实测） ③ **自研 5 技能 `skill.oms.sig`：验证 PASS → 改一字节 → `Hash mismatch` FAILED（2026-09-29 已实测）** | ✅ ①②③ 全部实测 |
 | **有用吗**（我们的加码） | Tier-3 五维 BENCHMARK：baseline vs with skill 差值 | ✅ 本地腿 5 组真数回填（失败项如实公开）+ 云端全量 **53 例**对照落盘（严格判卷结果照实记录） |
 
