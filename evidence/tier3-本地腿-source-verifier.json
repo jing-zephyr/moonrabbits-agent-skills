@@ -1,0 +1,329 @@
+{
+  "meta": {
+    "skill": "source-verifier",
+    "endpoint": "local",
+    "runs": 3,
+    "date": "2026-09-29T09:41:34.999Z",
+    "note": "usage=-1 表示 API 未返回 usage 字段，绝无估算"
+  },
+  "results": [
+    {
+      "id": "SV-P01",
+      "type": "positive",
+      "input": "（给一段展品叙事）帮我逐句找出处并给置信度",
+      "expect_trigger": true,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 1911,
+          "with_skill_ms": 3051,
+          "baseline_tokens": {
+            "prompt_tokens": 46,
+            "total_tokens": 134,
+            "completion_tokens": 88,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 958,
+            "total_tokens": 1098,
+            "completion_tokens": 140,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": true,
+            "signature_hit": "source-verifier"
+          },
+          "baseline_out": "请提供您需要分析的**展品叙事文本**。\n\n收到文本后，我将：\n1. **逐句分析**：识别每句话的来源或原型。\n2. **标注出处**：指明其出自哪部作品、历史事件、名言或是否为通用表述。\n3. **给出置信度**：基于匹配的确定性给出高",
+          "with_skill_out": "收到。作为 **source-verifier**，我已就绪。\n\n请提供以下两项内容以开始校验：\n\n1.  **待校验的展品叙事文本**（即您提到的“带结论的文本”）。\n2.  **参考来源/知识库**（可选，但强烈建议提供）。\n    *"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 1063,
+          "with_skill_ms": 2098,
+          "baseline_tokens": {
+            "prompt_tokens": 46,
+            "total_tokens": 95,
+            "completion_tokens": 49,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 958,
+            "total_tokens": 1054,
+            "completion_tokens": 96,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": true,
+            "signature_hit": "source-verifier"
+          },
+          "baseline_out": "您好！您似乎忘记附上需要分析的**展品叙事文本**了。\n\n请提供您想要逐句查找出处的文本内容，我将尽力为您识别每一句话的可能出处，并给出置信度评估。\n\n请粘贴文本。",
+          "with_skill_out": "您好！我已加载 **source-verifier** 技能，准备为您进行逐句溯源校验。\n\n请提供您需要校验的**展品叙事文本**。\n\n为了获得更准确的置信度评估，如果该文本基于特定的知识库、数据库或您指定的参考来源，请一并说明（例如：“基"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 6506,
+          "with_skill_ms": 2763,
+          "baseline_tokens": {
+            "prompt_tokens": 46,
+            "total_tokens": 381,
+            "completion_tokens": 335,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 958,
+            "total_tokens": 1087,
+            "completion_tokens": 129,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": true,
+            "signature_hit": "【校验结论】"
+          },
+          "baseline_out": "您好！您似乎**忘记粘贴需要分析的“展品叙事”文本**了。\n\n请提供您想要分析的具体文本段落。\n\n⚠️ **重要提示：**\n作为通用助手，我**无法访问**实时的、私有的或非公开的网络数据库（如特定博物馆的内部档案、未索引的学术论文、私有文",
+          "with_skill_out": "请提供需要核验的**展品叙事文本**。\n\n您可以直接粘贴文本，并尽可能提供以下信息以帮助提高置信度：\n1. **知识库/来源**：如有特定的参考书籍、论文、博物馆官方介绍或数据库名称，请一并附上。\n2. **核心结论**：如果文本中有特别需"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 0,
+        "with_skill_pass_rate": 1,
+        "with_skill_median_ms": 2763
+      }
+    },
+    {
+      "id": "SV-N01",
+      "type": "negative",
+      "input": "帮我写一篇 800 字的展品介绍",
+      "expect_trigger": false,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 10706,
+          "with_skill_ms": 14629,
+          "baseline_tokens": {
+            "prompt_tokens": 41,
+            "total_tokens": 598,
+            "completion_tokens": 557,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 953,
+            "total_tokens": 1701,
+            "completion_tokens": 748,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": false,
+            "signature_hit": "【校验结论】"
+          },
+          "baseline_out": "**展品名称：青铜立人像——三星堆文明的守望者**\n\n欢迎来到三星堆博物馆的核心展区，您眼前这座高达 2.62 米的巨型青铜立人像，不仅是该馆的镇馆之宝，更是古蜀文明神秘光辉的最强见证。它出土于1986年一号祭祀坑，以其宏大的体量、精湛的技",
+          "with_skill_out": "【校验结论】不通过\n【逐句出处】\n*   \"后母戊鼎（原称司母戊鼎）是商代后期王室祭祀用的青铜方鼎，1939年出土于河南安阳武官村。\" -> 来源：中国国家博物馆官网/殷墟博物馆官方介绍；置信度(0.95)\n*   \"它重达832.84公斤"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 11081,
+          "with_skill_ms": 15773,
+          "baseline_tokens": {
+            "prompt_tokens": 41,
+            "total_tokens": 616,
+            "completion_tokens": 575,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 953,
+            "total_tokens": 1760,
+            "completion_tokens": 807,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": false,
+            "signature_hit": "【校验结论】"
+          },
+          "baseline_out": "**展品名称：《时空回响：青铜饕餮纹方鼎》**\n\n欢迎来到本次展览的核心展区。在您面前的，是一件见证中华文明早期辉煌与神秘力量的重器——商代晚期青铜饕餮纹方鼎。这不仅是一件盛放祭品的礼器，更是三千年前工匠智慧与信仰体系的具象化载体。\n\n这件",
+          "with_skill_out": "【校验结论】\n**不通过**\n\n【逐句出处】\n*   **句子**：“青铜豆（Bronze Dou）是春秋晚期至战国时期流行的一种盛食器。”\n    *   **来源**：故宫博物院官网文物介绍 / 上海博物馆青铜器展厅说明牌\n    * "
+        },
+        {
+          "i": 2,
+          "baseline_ms": 11414,
+          "with_skill_ms": 20050,
+          "baseline_tokens": {
+            "prompt_tokens": 41,
+            "total_tokens": 634,
+            "completion_tokens": 593,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 953,
+            "total_tokens": 1985,
+            "completion_tokens": 1032,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": false,
+            "signature_hit": "【校验结论】"
+          },
+          "baseline_out": "**展品名称：汉代错金铜牛灯**\n\n在历史的长河中，总有一些器物穿越千年的尘埃，以其精湛的工艺和深邃的智慧，无声地诉说着那个时代的辉煌与文明。今天，我们将目光聚焦于这件来自西汉时期的珍贵文物——错金铜牛灯。它不仅是一件精美的青铜照明器具，更",
+          "with_skill_out": "【校验结论】不通过\n\n【逐句出处】\n*   **句子**：“司母戊鼎是商代晚期青铜器的代表作，重达832.84公斤，现藏于中国国家博物馆。”\n    *   **来源**：中国国家博物馆官网/公开考古报告\n    *   **置信度**：0"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 1,
+        "with_skill_pass_rate": 0,
+        "with_skill_median_ms": 15773
+      }
+    },
+    {
+      "id": "SV-E02",
+      "type": "edge",
+      "input": "（证据分 < 0.6）",
+      "expect_trigger": true,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 4768,
+          "with_skill_ms": 2341,
+          "baseline_tokens": {
+            "prompt_tokens": 40,
+            "total_tokens": 282,
+            "completion_tokens": 242,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 952,
+            "total_tokens": 1058,
+            "completion_tokens": 106,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": true,
+            "signature_hit": "【校验结论】"
+          },
+          "baseline_out": "收到。基于**证据分 < 0.6** 这一条件（通常意味着证据不足、置信度较低或未达到通过阈值），通常的处理逻辑如下。请根据您的具体应用场景选择：\n\n1.  **若用于审核/判断场景（如合规、内容安全、信用评估）：**\n    *   **",
+          "with_skill_out": "【校验结论】   不通过\n【逐句出处】   （无输入文本，无法进行逐句校验）\n【无依据断言】 （无输入文本，无断言可列）\n【冲突清单】   （无输入文本，无冲突可列）\n【处理建议】   根据规则：证据分 < 0.6，判定为**不通过**，建"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 3216,
+          "with_skill_ms": 2319,
+          "baseline_tokens": {
+            "prompt_tokens": 40,
+            "total_tokens": 203,
+            "completion_tokens": 163,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 952,
+            "total_tokens": 1058,
+            "completion_tokens": 106,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": true,
+            "signature_hit": "【校验结论】"
+          },
+          "baseline_out": "您好，您输入的内容看起来像是一个未完成的逻辑判断或公式片段：`（证据分 < 0.6）`。\n\n为了给您提供准确的回答，请补充更多上下文。例如：\n\n1. **这是某个评分系统的一部分吗？** 例如，在风险评级、置信度评估或分类任务中，“证据分”",
+          "with_skill_out": "根据 `source-verifier` 技能的判定规则，当**证据分 < 0.6** 时，触发以下判定与建议：\n\n**【校验结论】**\n**不通过**\n\n**【处理建议】**\n**建议拒答**\n\n---\n\n### 补充说明\n若需执行完整校"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 10464,
+          "with_skill_ms": 4122,
+          "baseline_tokens": {
+            "prompt_tokens": 40,
+            "total_tokens": 584,
+            "completion_tokens": 544,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 952,
+            "total_tokens": 1152,
+            "completion_tokens": 200,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": true,
+            "signature_hit": "【校验结论】"
+          },
+          "baseline_out": "“证据分 < 0.6” 这个表述通常出现在**法律证据评估**、**概率推理**、**机器学习/贝叶斯网络**或**学术论证**的语境中，具体含义取决于上下文。以下是几种可能的解释：\n\n### 1. 在法律证据评估中（主观概率视角）\n在某些",
+          "with_skill_out": "【校验结论】   不通过\n【逐句出处】   （无文本提供，无法逐句校验）\n【无依据断言】 （无文本提供，无法列出）\n【冲突清单】   （无文本提供，无法列出）\n【处理建议】   根据 `source-verifier` 技能说明中的硬约束与"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 0,
+        "with_skill_pass_rate": 1,
+        "with_skill_median_ms": 2341
+      }
+    }
+  ]
+}
