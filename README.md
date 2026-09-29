@@ -1,7 +1,7 @@
 # 灵兔文脉 MoonRabbits
 
-> **拍一件展品，带走它的时代故事。**
-> Take a photo of an exhibit — bring home the story of its age.
+> **从一件展品，讲出一个时代。**
+> From one object, an entire era.
 
 **灵兔文脉（MoonRabbits）是一个文化遗产多智能体叙事系统。**
 
@@ -29,8 +29,8 @@
 这次交的**不是一个新 demo**，而是把上面这套多专家叙事系统里**能复用的那部分，固化成了可安装、可组合、可验证的技能**：
 **把脉**（需求工程化，入口）→ **格物官 · 多专家编排**（叙事 / 校验 / 适配，主体）→ **NVIDIA 资源粘合**（引擎与治理，底座）。
 
-> **一句话**：拍一件展品，带走它的时代故事。
-> 而这句话背后，是一条**写死在技能里的执行规则**（`fail-closed`）：每一句都要有出处，讲不出来源的，宁可说"我不知道"——并且有**负向用例**在评测它。
+> **一句话**：让 Agent 讲一件展品的故事时，每一句都有出处；讲不出来源的，宁可说"我不知道"。
+> 这不是一句口号，是一条**写死在技能里的执行规则**（`fail-closed`），并且有**负向用例**在评测它。
 
 ---
 
@@ -41,7 +41,7 @@
 | ① | 项目说明（≥500 字） | 本 README §三 |
 | ② | 部署说明 | 本 README §四 |
 | ③ | 技术栈说明（NVIDIA SDK / 模型 / StepFun） | 本 README §五 + [`NVIDIA-STACK.md`](NVIDIA-STACK.md) |
-| ④ | 演示视频 | 【回填】B 站 URL ｜ **字幕与口播稿见 [`media/`](media/)** ｜ 结构与自查见 [`media/README.md`](media/README.md) |
+| ④ | 演示视频 | 【回填】B 站 URL ｜ 结构与自查见 [`media/README.md`](media/README.md) |
 | ⑤ | 赛事征文 · 十日谈 | 【回填】知乎/CSDN ｜ 篇目见 [`docs/提交-征文-十日谈.md`](docs/提交-征文-十日谈.md) |
 | ⑥ | 评测证据（Tier-3 五维 + 官方验签） | [`EVAL-NOTE.md`](EVAL-NOTE.md) · [`SIGNING.md`](SIGNING.md) · [`evidence/`](evidence/) |
 | ⑦ | 团队合影 | 【回填】随提交表单 |
