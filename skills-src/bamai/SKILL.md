@@ -67,7 +67,7 @@ version: 0.1.1
 
 - 提问方法参照 **laoyeye**（github.com/LearnPrompt/laoyeye，MIT）的 `socratic-inquiry`；
 - 规则逐字引用见 §二；本 skill **未复制其任何文件**，仅学习方法并以自己的话重写；
-- 本地留档：`_基座\06-项目档案\laoyeye拆解\`（上游 commit 与文件 sha256【待补录】）；
+- 上游许可：MIT（github.com/LearnPrompt/laoyeye）；本仓仅署名与引用规则，**未包含其源码文件**。
 - **我们的增量**：提问之后的「工程需求 + 任务拆分」（laoyeye 只产出"新问题"为止）——这一步是"像产品经理"，也是本 skill 的技术深度所在。
 
 ## 七、与其他 skill 的关系
