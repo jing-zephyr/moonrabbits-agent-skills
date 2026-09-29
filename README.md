@@ -44,7 +44,7 @@
 | ④ | 演示视频 | **▶ [B 站：灵兔文脉 MoonRabbits｜让每一句讲解都有出处](https://www.bilibili.com/video/BV16vaW6EEic/)** ｜ 结构与自查见 [`media/README.md`](media/README.md) |
 | ⑤ | 赛事征文 · 十日谈 | **▶ [知乎：十日谈 · 灵兔文脉 MoonRabbits](https://zhuanlan.zhihu.com/p/2088415588293010984)** ｜ 篇目见 [`docs/提交-征文-十日谈.md`](docs/提交-征文-十日谈.md) |
 | ⑥ | 评测证据（Tier-3 五维 + 官方验签） | [`EVAL-NOTE.md`](EVAL-NOTE.md)（口径）· [`SIGNING.md`](SIGNING.md) · **原始数据全在 [`evidence/`](evidence/)**：本地腿 5 组 · 云端腿 53 例 · 双端点对照 · 官方 API 实测 · 官方技能验签 |
-| ⑦ | 团队合影 | 【回填】随提交表单 |
+| ⑦ | 团队合影 | 随提交表单提交（不公开） |
 
 全量索引见 [`docs/提交-材料总表.md`](docs/提交-材料总表.md)。
 
