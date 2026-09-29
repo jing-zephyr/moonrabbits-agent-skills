@@ -40,7 +40,7 @@
 | 3:46–3:54 | 国风跑分卡（DGX Spark + Step 5 + Tier-3 实测数字，今晚回填，不预填） | Same task, with and without the skill, run twice. The difference is its contribution.（念一个最漂亮的实测数字；没跑完就如实说"this dimension isn't finished yet"，绝不念估计值） |
 | 3:54–3:57 | 月亮环抱兔 logo | An object has a soul, for it is not alone. |
 
-## 四、朗读纪律（沿用 AMD 录屏纪律）
+## 四、朗读纪律（沿用录屏纪律）
 
 1. 语速比平时慢 15%；FAILED 处停 2 秒；
 2. 两路录制：屏幕 + 口播分开录，后期再合；
