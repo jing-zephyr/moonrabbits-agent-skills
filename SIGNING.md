@@ -1,6 +1,6 @@
-# 签名说明（SIGNING.md 草稿 · 公开仓定稿用）
+# 签名说明（SIGNING.md）
 
-> 状态：草稿（2026-09-29 18:30）。定稿后随公开仓"预赛提交定稿"单次提交进入 `moonrabbits-agent-skills`。
+> 状态：**定稿**（2026-09-29）。随公开仓 `moonrabbits-agent-skills` 交付。
 > 用途：回答评委"你们的签名到底签了什么、怎么验证"。
 
 ---
@@ -9,7 +9,7 @@
 
 | 体系 | 谁签的 | 证明什么 | 验证材料 |
 |---|---|---|---|
-| **官方 vendor 技能** | NVIDIA（官方技能仓自带 `skill.oms.sig`） | 该技能是 NVIDIA 官方签发、未被篡改 | NVIDIA 根证书 `nv-agent-root-cert.pem`（随仓公开） |
+| **官方 vendor 技能** | NVIDIA（官方技能仓自带 `skill.oms.sig`） | 该技能是 NVIDIA 官方签发、未被篡改 | NVIDIA 根证书 [`evidence/nv-agent-root-cert.pem`](evidence/nv-agent-root-cert.pem)（已随仓公开） |
 | **我们自研技能** | zephyr 队（EC P-256 私钥，2026-09-29 实签） | 技能自签名之日起未被篡改（完整性） | 公开的公钥 `zephyr-signing-key.pub.pem`（随仓公开） |
 
 **诚实声明**：自研技能的签名证明的是**可验证的完整性**，不代表任何 NVIDIA 官方认证徽章；NVIDIA 官方徽章只属于官方技能。我们的立场（三帧之"信得过"）：**信任不来自注册表的徽章，来自可验证的完整性。**
@@ -23,7 +23,7 @@ pip install model-signing
 # 2. 验证官方 vendor 技能（NVIDIA 签名 + 根证书）
 model_signing verify certificate vendor/nvidia-skills/nvidia-skill-finder \
   --signature vendor/nvidia-skills/nvidia-skill-finder/skill.oms.sig \
-  --certificate_chain nv-agent-root-cert.pem --ignore_unsigned_files
+  --certificate_chain evidence/nv-agent-root-cert.pem --ignore_unsigned_files
 # → Verification succeeded
 
 # 3. 验证自研技能（zephyr 公钥）
