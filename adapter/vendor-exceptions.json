@@ -1,0 +1,12 @@
+{
+  "_说明": "vendor/ 下的官方文件永不修改。若官方自带的**测试样例**触发密钥扫描，在此具名登记——只放行登记过的『文件+理由』组合，出现新的命中一律仍然拦下。",
+  "_依据": "官方 skill-card-generator 的 evals 用例本身就在测『不要把密钥写进卡片』，所以 fixture 里必然出现假密钥。",
+  "exceptions": [
+    {
+      "path": "vendor/nvidia-skills/skill-card-generator/evals/evals.json",
+      "kind": "① 密钥",
+      "why": "官方评测用例的假密钥 fixture（sk-testsecret…），用于验证生成器会拒绝把密钥写进 skill card。非真实凭据。",
+      "verified_by": "人工逐行读原文确认：值为 sk-testsecret+数字，且出现在 evals 断言文本里"
+    }
+  ]
+}

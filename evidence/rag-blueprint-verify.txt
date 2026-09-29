@@ -1,0 +1,61 @@
+官方技能 rag-blueprint（NVIDIA RAG Blueprint）取得与验签证据
+================================================================
+来源仓库 : https://github.com/nvidia/skills
+技能路径 : skills/rag-blueprint/
+取得方式 : ① 官方 CLI：npx skills add nvidia/skills --skill rag-blueprint --yes（本机直连 clone 超时）
+           ② 改用 GitHub API 逐文件取得（gh api repos/nvidia/skills/contents/...）
+官方依据 : 官方 PPT《NVIDIA Skills 开发实战》第 11–13 页——41 条产品线筛出的 5 条"装上就能干活"代表之第一名
+           「Docker Compose / Helm 一键部署全栈 RAG」· 垂类场景：企业知识库 / 智能客服
+验签命令 : model_signing verify certificate <skill_dir> --signature <skill_dir>/skill.oms.sig \
+             --certificate_chain nv-agent-root-cert.pem --ignore_unsigned_files
+验签结果 : Verification succeeded（NVIDIA 根证书，2026-09-29 实测）
+文件数   : 38
+
+文件清单
+----------------------------------------------------------------
+BENCHMARK.md
+skill-card.md
+SKILL.md
+skill.oms.sig
+eval\h100.json
+eval\nvidia_hosted.json
+references\deploy.md
+references\shutdown.md
+references\troubleshoot.md
+references\configure\agentic-rag.md
+references\configure\api-reference.md
+references\configure\data-catalog.md
+references\configure\evaluation.md
+references\configure\guardrails.md
+references\configure\ingestion.md
+references\configure\mcp.md
+references\configure\migration.md
+references\configure\models-and-infrastructure.md
+references\configure\multimodal-query.md
+references\configure\notebooks.md
+references\configure\observability.md
+references\configure\query-and-conversation.md
+references\configure\reasoning-and-generation.md
+references\configure\search-and-retrieval.md
+references\configure\summarization.md
+references\configure\user-interface.md
+references\configure\vlm.md
+references\deploy\docker-nvidia-hosted.md
+references\deploy\docker-retrieval-only.md
+references\deploy\docker-self-hosted.md
+references\deploy\docker.md
+references\deploy\helm-mig.md
+references\deploy\helm-openshift.md
+references\deploy\helm-standard.md
+references\deploy\helm.md
+references\deploy\library-full.md
+references\deploy\library-lite.md
+references\deploy\library.md
+
+说明（如实）
+----------------------------------------------------------------
+本技能已取得并通过官方签名验证；其**部署本体今晚未实跑**——部署依赖 nvcr.io 容器镜像，
+本机/节点实测返回 HTTP 451（区域受限），与 NIM 容器同一限制。故本条目定位为
+「官方技能已取得并验签」，不宣称「已部署」。
+
+灵兔文脉 MoonRabbits · zephyr 队 · 第三届 NVIDIA DGX Spark 黑客松

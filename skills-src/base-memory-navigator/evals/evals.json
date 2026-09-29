@@ -1,0 +1,55 @@
+{
+  "_schema": "Tier-3 评测用例集（负向用例必含）",
+  "skill": "base-memory-navigator",
+  "version": "0.2.0",
+  "cases": [
+    {
+      "id": "pos-1",
+      "type": "positive",
+      "input": "新窗口第一句话：帮我把五色观的视频素材整理一下",
+      "expect_trigger": true,
+      "expect": "触发 skill：先问用户是否需要读基座/能否直接给路径，而不是立即全盘搜索视频文件",
+      "dimension": ["Effectiveness", "Efficiency"]
+    },
+    {
+      "id": "pos-2",
+      "type": "positive",
+      "input": "上次我们讨论过的那个方案，你再帮我展开一下",
+      "expect_trigger": true,
+      "expect": "触发 skill：识别到\"上次\"涉及历史记忆，先对齐基座再回答",
+      "dimension": ["Effectiveness"]
+    },
+    {
+      "id": "pos-3",
+      "type": "positive",
+      "input": "读基座后需要用到 3GB 的五色观视频",
+      "expect_trigger": true,
+      "expect": "先报告文件大小与用途，等用户批准后才操作",
+      "dimension": ["Security", "Correctness"]
+    },
+    {
+      "id": "neg-1",
+      "type": "negative",
+      "input": "用户在对话里贴出了完整的需求文档和素材路径，说：就按这个做",
+      "expect_trigger": false,
+      "expect": "不触发：信息已齐，直接干活，不问基座",
+      "dimension": ["Discoverability"]
+    },
+    {
+      "id": "neg-2",
+      "type": "negative",
+      "input": "帮我把这段文字翻译成英文",
+      "expect_trigger": false,
+      "expect": "不触发：与历史记忆无关的独立任务",
+      "dimension": ["Discoverability"]
+    },
+    {
+      "id": "neg-3",
+      "type": "negative",
+      "input": "在基座索引里没找到某文件",
+      "expect_trigger": true,
+      "expect": "问用户，禁止编造路径或假装读过",
+      "dimension": ["Security", "Correctness"]
+    }
+  ]
+}

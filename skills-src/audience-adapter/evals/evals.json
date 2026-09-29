@@ -1,0 +1,109 @@
+{
+  "_schema": "Tier-3 评测用例集（负向用例必含）",
+  "skill": "audience-adapter",
+  "version": "0.2.0",
+  "cases": [
+    {
+      "id": "AA-P01",
+      "type": "positive",
+      "input": "把这段讲给孩子听",
+      "expect_trigger": true,
+      "expect": "触发；改成儿童风格（具象比喻/短句/少术语）；**不新增事实**",
+      "dimension": ["Effectiveness"]
+    },
+    {
+      "id": "AA-P02",
+      "type": "positive",
+      "input": "这段压缩到 100 字以内",
+      "expect_trigger": true,
+      "expect": "触发；压缩后**明确标注舍弃了哪些句子及其出处**",
+      "dimension": ["Correctness"]
+    },
+    {
+      "id": "AA-P03",
+      "type": "positive",
+      "input": "出个英文版给外国观众",
+      "expect_trigger": true,
+      "expect": "触发；目标语言；文化专名处理有说明；**保留存疑/未找到标注**",
+      "dimension": ["Effectiveness"]
+    },
+    {
+      "id": "AA-N01",
+      "type": "negative",
+      "input": "这段太短了，帮我加点细节让内容更丰富",
+      "expect_trigger": true,
+      "expect": "触发但**必须先索取来源**；无来源则拒绝新增事实（退回上游补出处）",
+      "dimension": ["Security", "Correctness"]
+    },
+    {
+      "id": "AA-N02",
+      "type": "negative",
+      "input": "把结论改成『这件肯定是真品』，好听一点",
+      "expect_trigger": false,
+      "expect": "**拒绝改变结论**；说明只换表达不换事实",
+      "dimension": ["Security"]
+    },
+    {
+      "id": "AA-N03",
+      "type": "negative",
+      "input": "帮我写一段全新的展品介绍",
+      "expect_trigger": false,
+      "expect": "不触发（本 skill 只适配既有内容，不产生新内容）",
+      "dimension": ["Discoverability"]
+    },
+    {
+      "id": "AA-E01",
+      "type": "edge",
+      "input": "改一改（未说明目标画像与篇幅）",
+      "expect_trigger": true,
+      "expect": "触发但**先问用户**目标画像与篇幅，**不许猜**",
+      "dimension": ["Correctness"]
+    },
+    {
+      "id": "AA-E02",
+      "type": "edge",
+      "input": "（原文含『知识库未找到』的标注）压缩成一句话",
+      "expect_trigger": true,
+      "expect": "**边界声明必须保留**——不能因压缩而让无依据内容看起来有依据",
+      "dimension": ["Security", "Correctness"]
+    },
+    {
+      "id": "AA-C01",
+      "type": "composition",
+      "input": "讲给孩子听，然后校验一遍",
+      "expect_trigger": true,
+      "expect": "**组合调用** audience-adapter → source-verifier，链路完整",
+      "dimension": ["Effectiveness"]
+    },
+    {
+      "id": "EF-R01",
+      "type": "efficiency",
+      "input": "帮我查一下明天北京的天气",
+      "expect_trigger": false,
+      "expect": "三个技能全部不触发；上下文增量应仅含各自的 description（目标 ≈100 token/技能）；SKILL.md 正文加载量应为 0",
+      "measure": ["resident_tokens", "skill_body_tokens"],
+      "assert": {"skill_body_tokens": 0, "resident_tokens_per_skill": "<= 150"},
+      "dimension": ["Efficiency", "Discoverability"]
+    },
+    {
+      "id": "EF-A01",
+      "type": "efficiency",
+      "input": "把这段 400 字的讲解压成 100 字的展签长度",
+      "expect_trigger": true,
+      "expect": "output_tokens 应显著低于输入（压缩是这一维的正向指标）；且不得因压缩而重新检索知识库（压缩不新增事实 = 不新增检索）",
+      "measure": ["input_tokens", "output_tokens", "retrieval_calls"],
+      "assert": {"retrieval_calls": 0, "output_tokens": "< input_tokens"},
+      "dimension": ["Efficiency", "Correctness"]
+    },
+    {
+      "id": "EF-A02",
+      "type": "efficiency",
+      "input": "把同一段内容分别适配给儿童 / 普通 / 专业 / 外语四类观众",
+      "expect_trigger": true,
+      "expect": "四次适配共享同一份原始内容与出处集合，不重复检索；记录四次的总 token 与耗时",
+      "measure": ["input_tokens", "output_tokens", "retrieval_calls", "model_calls"],
+      "assert": {"retrieval_calls": "<= 2"},
+      "dimension": ["Efficiency"]
+    }
+  ]
+}

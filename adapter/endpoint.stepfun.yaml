@@ -1,0 +1,22 @@
+# adapter/endpoint.stepfun.yaml —— 换脑到 StepFun 阶跃星辰
+# 与 endpoint.local.yaml 逐行对照：**只有三个值不同**。这就是「架构可搬用」的证据。
+# 依据：官方 tao-generate-image-grounding/SKILL.md L49–58 原文支持任意 OpenAI 兼容端点
+vlm:
+  backend: "openai"
+  openai:
+    base_url: "https://api.stepfun.com/step_plan/v1"   # ← 值 1（订阅额度端点；按量端点为 /v1）
+    model_name: "step-5-preview"                       # ← 值 2
+    api_key: "${STEPFUN_API_KEY}"                      # ← 值 3（环境变量注入，绝不落盘）
+    temperature: 0.2
+    max_tokens: 4096      # ⚠️ 已固化的坑：max_tokens 太小（如 16）content 会被 reasoning 吃空 → 默认 1024+，空了自动放大 4 倍重试
+    timeout: 120
+
+# 切过去只需：
+#   export VLM_BACKEND=stepfun
+#   export STEPFUN_API_KEY=...   # 由甲方注入
+#   adapter/run-official-skill.sh tao-generate-image-grounding ...
+#
+# ⚠️ 答辩时必须说清的两条限定（否则会被问穿）：
+#   1. 只对「把 VLM 调用收敛到 OpenAI 兼容端点」的技能成立（tao-* 家族）；
+#      VSS / DeepStream 那类要部署整套 NVIDIA 微服务的，搬不走。
+#   2. 接口兼容 ≠ 行为等价 —— 换模型必须跑一遍回归评测（BENCHMARK.md 就是干这个的）。

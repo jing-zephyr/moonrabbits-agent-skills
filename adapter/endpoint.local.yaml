@@ -1,0 +1,18 @@
+# adapter/endpoint.local.yaml —— 本地 DGX Spark（NVIDIA 侧）的端点配置
+# 这三个值就是「可搬用」的全部：base_url / model_name / api_key
+# 依据：官方 tao-generate-image-grounding/SKILL.md 第 49–58 行原文
+#       （选 vlm.backend: "openai" → 收集 base_url / model_name / api_key → 任何 OpenAI 兼容端点）
+vlm:
+  backend: "openai"
+  openai:
+    base_url: "http://127.0.0.1:8000/v1"     # ← 值 1（本地 vLLM；端口由环境变量注入，不入材料）
+    model_name: "Qwen3.6-35B-A3B-FP8"       # ← 值 2
+    api_key: "EMPTY"                        # ← 值 3（本地 vLLM 不校验）
+    temperature: 0.2
+    max_tokens: 4096
+    timeout: 120
+
+# GB10 运行前置（写在这里备忘；真正 export 在 adapter/env.sh）
+# 必须: VLLM_USE_DEEP_GEMM=0
+# 必须: --moe-backend triton
+# 否则: CUDA_ERROR_INVALID_IMAGE

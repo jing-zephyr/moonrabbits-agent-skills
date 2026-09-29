@@ -1,0 +1,109 @@
+{
+  "upstream": "github.com/NVIDIA/skills",
+  "commit": "d8519c57da6db5d9bea274ec1724a4a7a56a3dee",
+  "captured_at": "2026-09-27",
+  "policy": "官方文件逐字复制，永不修改；环境差异一律放 adapter/",
+  "skills": {
+    "tao-generate-image-grounding": {
+      "license": "Apache-2.0",
+      "files": {
+        "BENCHMARK.md": "d2edaee3d3aba2a4ac96503b50ee5e01be0bc543709e2a38856e5dffb58cdaf4",
+        "SKILL.md": "33f6e56ecf463f02baef1c4fc6fd897e212f0087d8595699c8a14f466cf4e7d8",
+        "config/skillspector-baseline.yaml": "8b379b90c383dfa5a88ed9f75082a0046cba7a75ddd00942fbdb2dc6c2119021",
+        "evals/evals.json": "54dad976f02bf1c369e1040503249a1ee57753918d87877514a5ea604219b3b4",
+        "references/configuration.md": "7d96e97508fc0a0b7b72a6490af63769a869c7712ece98628f75a646eb6da6a7",
+        "references/skill_info.yaml": "8cdd6c26a1cec657cd872685fe4ad4f2ea5c1d13d77b5256305edc2ee0171ec4",
+        "references/vllm_server.md": "5fd63aa9b491db5fd55f796ed3b382d06d71c7fcab840fc20e12ef6bf02f382b",
+        "skill-card.md": "9e2dc0bd87fce0ab49543cfa5adc6eb4d09e0c5bf0924ee33db9e08389c2a7fa",
+        "skill.oms.sig": "f47bc1760ee06e10b4bd39ca29464a1662d5be521e443c5a39105bdfa61c4ee9"
+      }
+    },
+    "tao-generate-referring-expressions": {
+      "license": "Apache-2.0",
+      "files": {
+        "BENCHMARK.md": "b30a35704457f190b6124f43d74d02db0d7bcf87a85d696b85dcb84d732f37dd",
+        "SKILL.md": "efb202f17a8cb292236dae830c2f3fb0a431179e43ed3263661a9687161f6f2b",
+        "config/skillspector-baseline.yaml": "8b379b90c383dfa5a88ed9f75082a0046cba7a75ddd00942fbdb2dc6c2119021",
+        "evals/evals.json": "45fe82108e99607ff138b73bd5b3272e8b8e10e7e5fd35d3f00e5a9afa493c78",
+        "references/configuration.md": "b73ad4e46ba38a0be0a2175f489cf3376d37f8f868928dc6b9fc0907956365e0",
+        "references/skill_info.yaml": "fcb01ffbd29ce9fe5679ad3cfbaf4d6f97a1f7ebef8a9f17ecb513e6a264e74c",
+        "references/vllm_server.md": "5fd63aa9b491db5fd55f796ed3b382d06d71c7fcab840fc20e12ef6bf02f382b",
+        "skill-card.md": "6657d1af390051d1ed785515c9df4b0f612f461e8bc45301e48b3297e8784979",
+        "skill.oms.sig": "65cc9300c6804327ed40921caf375318857e03014df4bdc9113c618d38933697"
+      }
+    },
+    "nvidia-skill-finder": {
+      "license": "CC-BY-4.0 AND Apache-2.0",
+      "files": {
+        "BENCHMARK.md": "d410c655aab5ffcf89c17d7f9a10252f98505a0be2d6819d8a6e998f8ee8b039",
+        "SKILL.md": "51fe4ff117f34919527ad4540513910e16eb225f7ad04686fbbe985035fdf9cf",
+        "agents/openai.yaml": "f2b29422520612505643c6a1dd2f441b4a1bf350fa51c6fe6ef45a526a72b739",
+        "evals/evals.json": "75f03167bc45e3eac9b616583ae3dcae7cc8362a8645a2393cfecd7f2444b08e",
+        "references/taxonomy-routing.md": "a24b594b06fa4e16c8937da54b9bfc2cbece8bcc66b9d02a6729434021a16848",
+        "skill-card.md": "aa6e203fa112801759bfd46452fe042d955af8e4589a6b74aec2a2d9e79f604b",
+        "skill.oms.sig": "4704ac9d425816e15eef0bd30f46fa123dac2db8f8fa588e11f6d3ad143d1b93"
+      }
+    },
+    "skill-card-generator": {
+      "license": "CC-BY-4.0 AND Apache-2.0",
+      "files": {
+        "BENCHMARK.md": "7b7dd2cabd51fe2aba442fb4e952113a87db1492558985b4c20aca9df61ed7e1",
+        "SKILL.md": "42012d124c5d974674015f1eca88a4d13a211fe16fc7d0a0c37f5d869d057cfa",
+        "Skill Card Generator Card": "b3a56568703331140d3dff24cbe99b714685d300bdb33327f465623cc1ad5bb0",
+        "Skill Card Generator License": "81985deef62fcd1facf8e91f4bcbdc074921b406b3d9d2c47596033495e2006e",
+        "evals/evals.json": "9624531c845700564ebf8309658286b627a430148596a0e0dfdc6cafe5a8443b",
+        "references/catalog/limitations.json": "03372bd0082f6f5df6764f86837e1774242eefe3c6e86b8583f053119fd7d9a5",
+        "references/catalog/risks.json": "d3888f66d89213e73b9448b13ba865e785c62e8b6a83245cc32df4559438653d",
+        "references/skill-card.md.j2": "088de0b108dfece188a5bf202dbf0958f235c41421f1dca05ace5d083830be7c",
+        "references/style-guide.md": "feeb7cd9cc0fd109ffd3c2821b817c31fa2e0fff17b890adca572dbd6f86d7c5",
+        "scripts/discover_assets.py": "02aeaa716866ff4063c15fb14af9d6aad38bc0da85b32a33d9bd99f531b486a0",
+        "scripts/render_card.py": "76c752f049ebe2542731ee0bbe46204889211228ff22eadb62219fb22cb6485e",
+        "scripts/validate_submission.py": "27df79512570edc4965830a74c4082a5604d89f7fac0ec48c7230fb5fa7cdfb9",
+        "skill-card.md": "ddf9ee7c61039cf067b87cc6c187dfb22b2d287029e17cd12d5f777330d27425",
+        "skill.oms.sig": "b9046e0b9653d1c26ae1d9e8db44c83e12c859ffd0c1a65e261972a36afb4ffd"
+      }
+    }
+  },
+  "self": {
+    "skills_src": {
+      "README.md": "962af28d576ee27359bef4fbc9692200cfaeb96df24023dc125442ceec7c519d",
+      "_runtime/run-selftest.mjs": "5973d7214c6b3159e002c01fa88471b3270b84b3fe15e0f7eed1bc474cb1defa",
+      "_runtime/stepfun.mjs": "8392ffa46fc1ef89bc15c333d932a926e63376634f1b10fae8d03d7e0159c015",
+      "audience-adapter/BENCHMARK.md": "d6ad0469619abc20999c3d6daa006cb37b2e1c812a239546a8cda1c784bc939e",
+      "audience-adapter/SKILL.md": "9cbf52ef50aaaf56e7a99b559af297785b00c4792befe14fe6b6c03f75b55eb0",
+      "audience-adapter/evals/evals.json": "fffbce4c1fd1c1efad67288114291987d19fc8d212d41dde6008c8b8fb7e0d86",
+      "audience-adapter/references/styles.md": "710f93c3035c0a3ab95bbb7cf151c462b17da22805084f8cd17377e21bcc5d5d",
+      "audience-adapter/skill-card.md": "630571ca441ac12abc85aed2a7aa99e8112b6327c7118dcf8176671644c5d862",
+      "audience-adapter/skill.oms.sig": "2df0415579c5fe1033da7ee5911bb3c663230c0b0255e630f819ea8c1dd0a658",
+      "bamai/BENCHMARK.md": "eeefe2bbc0cb534049d24bee99f739ed0f2718b64f67938287ee087c193b6f28",
+      "bamai/SKILL.md": "df4cdeb93acd9af1e68289bd76bb3f4931732bc43379ac1a2bbae8ab54c4d2c9",
+      "bamai/evals/evals.json": "166cf59d85400d32f377cdc79a4ebba10e050a7e6188c479f2778b811c7ba0d2",
+      "bamai/skill-card.md": "48e13df74bcd8cce268e81d62cd89ef9fc35c3ea7e246b980b3dd62ecfec3392",
+      "bamai/skill.oms.sig": "571ec5f36a30cf693389ccde51406638ce75ff59737d7e4aed1b39dacee0fd4f",
+      "base-memory-navigator/BENCHMARK.md": "9706201f3344f5cdeaa5c264bc91cf682f491447db2c37a17411f0fed4805421",
+      "base-memory-navigator/SKILL.md": "db623383f8cc37a1123a5d6d3ce8af2350bcbd1497daae522898dfefbeb19fc7",
+      "base-memory-navigator/SKILL.original-20260922.md": "0403ccdc59539cb593c0b00cbb865c9dc1b61184e5f6bc8c9a34fa74ebccdb6c",
+      "base-memory-navigator/evals/evals.json": "df407c512c079d3da86fa5730bf837ae67e9df28b4b4c63eaada296652185cfe",
+      "base-memory-navigator/skill-card.md": "5c907a536e3b1a7183e5e40843c839d505eaa13d5e1d17b620d72451c9d87987",
+      "base-memory-navigator/skill.oms.sig": "589db4ff2ef11922366c23fbb807ccb5e24371ffb9436ba1abce14bdab81b506",
+      "exhibit-narrative/BENCHMARK.md": "560ed0d204af8f720dba44d0fe2a051fb58aeedfc9927bf5336e5ba4e7e9d023",
+      "exhibit-narrative/SKILL.md": "151064d06be05f0367c9e99d3554f3785980e50d3efc1b34437376d2dd706d93",
+      "exhibit-narrative/evals/evals.json": "ed369707e4df0c9725b1fb326a9def89ee23bd6b2d8890888d452e4c0a09df8a",
+      "exhibit-narrative/references/audience-styles.md": "3bf7ecb2659015e4513610cb0d381af01a2cf336577cd5653bd79e622a818afd",
+      "exhibit-narrative/references/five-color.md": "081069e2d829d1a1a80521b5a30f582aecf06fa47e9d81270ca6006dd90aa2ea",
+      "exhibit-narrative/references/five-color.original-20260923.md": "f47ebc5db84c6dd389e89272db371ce1cb92a86857316d3c9ffe7cafed20f13c",
+      "exhibit-narrative/references/season-white.md": "adecc49012ca4470580d4b645c592ba61845aa01fbd75f6dac21824dbcfb6e9f",
+      "exhibit-narrative/references/troubleshooting.md": "7be60483364274c4918209096b28af9a913b637bf261464b3d8b57990b238b39",
+      "exhibit-narrative/scripts/kb_search.py": "573838f78801ad905c4f3533ad5804dd00bfa2ca1f70959837a48c9960083d27",
+      "exhibit-narrative/scripts/verify_sources.py": "5c37f6ab4306058ffdb4caa161aba6defe6b3b57e5f766ee11864bffb9c1c47f",
+      "exhibit-narrative/skill-card.md": "1d4e6f2a18276e84736d185736a7bdea52cce3bd3c194d94c625b5347b23636d",
+      "exhibit-narrative/skill.oms.sig": "a5f136c34927c2d6aaf3385b45c6c1cb7b78fded054076a44ea22943167a8d3a",
+      "source-verifier/BENCHMARK.md": "4fd85eed5f16eec4b01a0aeb80378bbec7e17dea758ea6f047d4784638022385",
+      "source-verifier/SKILL.md": "403d7519b4394bce6001ba9f33f68a3a4533356feb38105d360a7a41d187db93",
+      "source-verifier/evals/evals.json": "18fbfc023305eec430880bf58973098ee30d185e626eed1856d26561b4ffe801",
+      "source-verifier/skill-card.md": "9dafcead5912634bb62a41640359e868e66054b110475bb46d7f6d07c5e8619e",
+      "source-verifier/skill.oms.sig": "d42cee29d34e3cb16607f54c179d9a690616adac0fbb106d257ff748372d39bd"
+    },
+    "captured_at": "2026-09-29T10:31:49.671Z"
+  }
+}
