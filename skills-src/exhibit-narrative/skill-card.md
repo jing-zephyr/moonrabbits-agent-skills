@@ -81,5 +81,5 @@
 | 项 | 状态 |
 |---|---|
 | `evals/evals.json` | ✅ 16 条（含 3 条负向、4 条 Efficiency、3 条边界、2 条安全、1 条组合） |
-| `BENCHMARK.md`（带/不带 skill 五维对比） | ⏳ **待跑**（数据列留空，实测后回填） |
+| `BENCHMARK.md`（带/不带 skill 五维对比） | ✅ 已实测回填（每用例 ×3 取中位数；原始数据见公开仓 `evidence/`） |
 | 签名 `skill.oms.sig` | ⏳ 待签名 |
