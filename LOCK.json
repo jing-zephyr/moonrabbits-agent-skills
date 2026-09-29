@@ -81,11 +81,10 @@
       "bamai/skill-card.md": "48e13df74bcd8cce268e81d62cd89ef9fc35c3ea7e246b980b3dd62ecfec3392",
       "bamai/skill.oms.sig": "571ec5f36a30cf693389ccde51406638ce75ff59737d7e4aed1b39dacee0fd4f",
       "base-memory-navigator/BENCHMARK.md": "9706201f3344f5cdeaa5c264bc91cf682f491447db2c37a17411f0fed4805421",
-      "base-memory-navigator/SKILL.md": "db623383f8cc37a1123a5d6d3ce8af2350bcbd1497daae522898dfefbeb19fc7",
-      "base-memory-navigator/SKILL.original-20260922.md": "0403ccdc59539cb593c0b00cbb865c9dc1b61184e5f6bc8c9a34fa74ebccdb6c",
+      "base-memory-navigator/SKILL.md": "f48e6484c752ef38a117b57d853907c1a650d5c5f2b0f91bd636b20c1d124bec",
       "base-memory-navigator/evals/evals.json": "df407c512c079d3da86fa5730bf837ae67e9df28b4b4c63eaada296652185cfe",
-      "base-memory-navigator/skill-card.md": "5c907a536e3b1a7183e5e40843c839d505eaa13d5e1d17b620d72451c9d87987",
-      "base-memory-navigator/skill.oms.sig": "589db4ff2ef11922366c23fbb807ccb5e24371ffb9436ba1abce14bdab81b506",
+      "base-memory-navigator/skill-card.md": "2ae5c7b4cdd6365d696edf4f1e275d5bc2bfab16cf01243bb62d82bc9c130ed2",
+      "base-memory-navigator/skill.oms.sig": "a91cb22a2ec98118d7ecadb995827abb6947df2d07ef7182967b0bd5b74c1176",
       "exhibit-narrative/BENCHMARK.md": "560ed0d204af8f720dba44d0fe2a051fb58aeedfc9927bf5336e5ba4e7e9d023",
       "exhibit-narrative/SKILL.md": "d32089ee6dcbd81b9bfdd423f1b4219ee17248711a1894a28095f29641cf651f",
       "exhibit-narrative/evals/evals.json": "ed369707e4df0c9725b1fb326a9def89ee23bd6b2d8890888d452e4c0a09df8a",
@@ -95,15 +94,15 @@
       "exhibit-narrative/references/season-white.md": "adecc49012ca4470580d4b645c592ba61845aa01fbd75f6dac21824dbcfb6e9f",
       "exhibit-narrative/references/troubleshooting.md": "7be60483364274c4918209096b28af9a913b637bf261464b3d8b57990b238b39",
       "exhibit-narrative/scripts/kb_search.py": "573838f78801ad905c4f3533ad5804dd00bfa2ca1f70959837a48c9960083d27",
-      "exhibit-narrative/scripts/verify_sources.py": "5c37f6ab4306058ffdb4caa161aba6defe6b3b57e5f766ee11864bffb9c1c47f",
+      "exhibit-narrative/scripts/verify_sources.py": "df65706621d2264bc43f6bb3c43180a9bef938f730d413c16ebf4db5dff96a1b",
       "exhibit-narrative/skill-card.md": "1d4e6f2a18276e84736d185736a7bdea52cce3bd3c194d94c625b5347b23636d",
-      "exhibit-narrative/skill.oms.sig": "a45f56d2c224d9381620c6dcde82a7b9f1e1a9cf8a0830d41110a5ce8e34b803",
+      "exhibit-narrative/skill.oms.sig": "9b3673dd382dfbd8c346a2eb24e83dfb47d645144c16e3021a189b8ef5d7e8c5",
       "source-verifier/BENCHMARK.md": "93a0cde16b8483aa55e67517a9aa314123a681405dd680e08e91ff0c6d3eae7e",
       "source-verifier/SKILL.md": "403d7519b4394bce6001ba9f33f68a3a4533356feb38105d360a7a41d187db93",
       "source-verifier/evals/evals.json": "18fbfc023305eec430880bf58973098ee30d185e626eed1856d26561b4ffe801",
       "source-verifier/skill-card.md": "9dafcead5912634bb62a41640359e868e66054b110475bb46d7f6d07c5e8619e",
       "source-verifier/skill.oms.sig": "298cd7cf58b80648768850dd8ab41044d6a7dc65405be97909107b96d2cf0279"
     },
-    "captured_at": "2026-09-29T16:23:56.550Z"
+    "captured_at": "2026-09-29T16:27:46.950Z"
   }
 }
