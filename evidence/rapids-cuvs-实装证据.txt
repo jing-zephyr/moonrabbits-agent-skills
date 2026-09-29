@@ -21,11 +21,11 @@ python3 -m venv ~/venv-raft
 ```
 cuda-bindings==12.9.9
 cuda-pathfinder==1.8.2
-cuda-toolkit==12.9.2.0
+cuda-toolkit（版本见 12.9 系列）
 cuvs-cu12==26.8.1
 libcuvs-cu12==26.8.1
 libraft-cu12==26.8.0
-nvidia-cuda-nvrtc-cu12==12.9.86
+nvidia-cuda-nvrtc-cu12（12.9 系列）
 pylibraft-cu12==26.8.0
 ```
 
