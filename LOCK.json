@@ -69,12 +69,12 @@
       "README.md": "962af28d576ee27359bef4fbc9692200cfaeb96df24023dc125442ceec7c519d",
       "_runtime/run-selftest.mjs": "5973d7214c6b3159e002c01fa88471b3270b84b3fe15e0f7eed1bc474cb1defa",
       "_runtime/stepfun.mjs": "8392ffa46fc1ef89bc15c333d932a926e63376634f1b10fae8d03d7e0159c015",
-      "audience-adapter/BENCHMARK.md": "d6ad0469619abc20999c3d6daa006cb37b2e1c812a239546a8cda1c784bc939e",
+      "audience-adapter/BENCHMARK.md": "e5995fc062b623e70cbd92d53f316bc0b927d7808bfba63ed132cecd6312d081",
       "audience-adapter/SKILL.md": "9cbf52ef50aaaf56e7a99b559af297785b00c4792befe14fe6b6c03f75b55eb0",
       "audience-adapter/evals/evals.json": "fffbce4c1fd1c1efad67288114291987d19fc8d212d41dde6008c8b8fb7e0d86",
       "audience-adapter/references/styles.md": "710f93c3035c0a3ab95bbb7cf151c462b17da22805084f8cd17377e21bcc5d5d",
       "audience-adapter/skill-card.md": "630571ca441ac12abc85aed2a7aa99e8112b6327c7118dcf8176671644c5d862",
-      "audience-adapter/skill.oms.sig": "2df0415579c5fe1033da7ee5911bb3c663230c0b0255e630f819ea8c1dd0a658",
+      "audience-adapter/skill.oms.sig": "aace1b281e254b24f7ed9f45e8ff2b89674cd742805d3b44ff071eadbf78b2d3",
       "bamai/BENCHMARK.md": "eeefe2bbc0cb534049d24bee99f739ed0f2718b64f67938287ee087c193b6f28",
       "bamai/SKILL.md": "df4cdeb93acd9af1e68289bd76bb3f4931732bc43379ac1a2bbae8ab54c4d2c9",
       "bamai/evals/evals.json": "166cf59d85400d32f377cdc79a4ebba10e050a7e6188c479f2778b811c7ba0d2",
@@ -87,7 +87,7 @@
       "base-memory-navigator/skill-card.md": "5c907a536e3b1a7183e5e40843c839d505eaa13d5e1d17b620d72451c9d87987",
       "base-memory-navigator/skill.oms.sig": "589db4ff2ef11922366c23fbb807ccb5e24371ffb9436ba1abce14bdab81b506",
       "exhibit-narrative/BENCHMARK.md": "560ed0d204af8f720dba44d0fe2a051fb58aeedfc9927bf5336e5ba4e7e9d023",
-      "exhibit-narrative/SKILL.md": "151064d06be05f0367c9e99d3554f3785980e50d3efc1b34437376d2dd706d93",
+      "exhibit-narrative/SKILL.md": "d32089ee6dcbd81b9bfdd423f1b4219ee17248711a1894a28095f29641cf651f",
       "exhibit-narrative/evals/evals.json": "ed369707e4df0c9725b1fb326a9def89ee23bd6b2d8890888d452e4c0a09df8a",
       "exhibit-narrative/references/audience-styles.md": "3bf7ecb2659015e4513610cb0d381af01a2cf336577cd5653bd79e622a818afd",
       "exhibit-narrative/references/five-color.md": "081069e2d829d1a1a80521b5a30f582aecf06fa47e9d81270ca6006dd90aa2ea",
@@ -97,13 +97,13 @@
       "exhibit-narrative/scripts/kb_search.py": "573838f78801ad905c4f3533ad5804dd00bfa2ca1f70959837a48c9960083d27",
       "exhibit-narrative/scripts/verify_sources.py": "5c37f6ab4306058ffdb4caa161aba6defe6b3b57e5f766ee11864bffb9c1c47f",
       "exhibit-narrative/skill-card.md": "1d4e6f2a18276e84736d185736a7bdea52cce3bd3c194d94c625b5347b23636d",
-      "exhibit-narrative/skill.oms.sig": "a5f136c34927c2d6aaf3385b45c6c1cb7b78fded054076a44ea22943167a8d3a",
-      "source-verifier/BENCHMARK.md": "4fd85eed5f16eec4b01a0aeb80378bbec7e17dea758ea6f047d4784638022385",
+      "exhibit-narrative/skill.oms.sig": "a45f56d2c224d9381620c6dcde82a7b9f1e1a9cf8a0830d41110a5ce8e34b803",
+      "source-verifier/BENCHMARK.md": "93a0cde16b8483aa55e67517a9aa314123a681405dd680e08e91ff0c6d3eae7e",
       "source-verifier/SKILL.md": "403d7519b4394bce6001ba9f33f68a3a4533356feb38105d360a7a41d187db93",
       "source-verifier/evals/evals.json": "18fbfc023305eec430880bf58973098ee30d185e626eed1856d26561b4ffe801",
       "source-verifier/skill-card.md": "9dafcead5912634bb62a41640359e868e66054b110475bb46d7f6d07c5e8619e",
-      "source-verifier/skill.oms.sig": "d42cee29d34e3cb16607f54c179d9a690616adac0fbb106d257ff748372d39bd"
+      "source-verifier/skill.oms.sig": "298cd7cf58b80648768850dd8ab41044d6a7dc65405be97909107b96d2cf0279"
     },
-    "captured_at": "2026-09-29T10:31:49.671Z"
+    "captured_at": "2026-09-29T16:23:56.550Z"
   }
 }
