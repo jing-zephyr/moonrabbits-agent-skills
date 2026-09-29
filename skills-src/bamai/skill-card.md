@@ -77,5 +77,5 @@
 | 项 | 状态 |
 |---|---|
 | `evals/evals.json` | ✅ 11 条（含 3 条负向、2 条边界、1 条安全、1 条组合、1 条 Efficiency） |
-| `BENCHMARK.md` | ⏳ 待跑（数据列留空，实测后回填） |
+| `BENCHMARK.md` | ✅ 已实测回填（每用例 ×3 取中位数；原始数据见公开仓 `evidence/`） |
 | 签名 `skill.oms.sig` | ⏳ 待签名 |
