@@ -1,0 +1,59 @@
+1
+00:00:00,000 --> 00:00:04,000
+向设计师介绍白瓷的文化内涵
+Introduce the cultural meaning of Blanc de Chine to a designer
+
+2
+00:00:04,000 --> 00:00:06,500
+用户用英文提问，系统开始作答
+The user asks in English, and the system starts answering
+
+3
+00:00:06,500 --> 00:00:10,500
+它与景德镇的白瓷有什么不同？
+How is it different from the white porcelain made in Jingdezhen?
+
+4
+00:00:10,500 --> 00:00:13,000
+它在对比两种白瓷的胎釉与气质
+It compares the two white porcelains' body, glaze, and character
+
+5
+00:00:13,000 --> 00:00:17,500
+这张图片里的色彩和器物，背后有什么文化故事？
+What cultural stories lie behind the colors and objects in this image?
+
+6
+00:00:17,500 --> 00:00:20,000
+用户上传白瓷图片，系统读图作答
+The user uploads a photo, and the system reads the image
+
+7
+00:00:20,000 --> 00:00:25,000
+基于上面的白瓷故事，写一段三场景视频脚本，并附文生视频模型的提示词
+Based on the Blanc de Chine story above, write a 3-scene video script with prompts for a text-to-video model
+
+8
+00:00:25,000 --> 00:00:27,500
+它把故事改写成了可直接生成的分镜脚本
+It turns the story into a ready-to-shoot video script
+
+9
+00:00:27,500 --> 00:00:32,500
+用一段话向年轻人讲讲，为什么白瓷值得他们停下来看一眼
+Tell young people, in one paragraph, why Blanc de Chine deserves a second look
+
+10
+00:00:32,500 --> 00:00:35,000
+切回中文提问，系统继续组织语言作答
+Back to Chinese — the system keeps answering fluently
+
+11
+00:00:35,000 --> 00:00:40,500
+给我讲讲白瓷的故事，以及它对欧洲的影响
+Raconte-moi l'histoire du Blanc de Chine et son influence en Europe
+
+12
+00:00:40,500 --> 00:00:44,000
+它切换成法语，自动跟随提问的语言作答
+It switches to French, following the question's language automatically
