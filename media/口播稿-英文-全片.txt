@@ -1,0 +1,47 @@
+# 全片英文口播稿 · 定稿（2026-09-29 视频线 v2，22:15 综合指令同步版）
+
+> 依据：《口播稿-英文-全片.txt》+《录制执行清单与逐字口播稿-20260929.md》+ 甲方 2026-09-29 22:15 综合指令 A 节。
+> 拍板口径：**今晚英文 AI 音保底**（即梦音色克隆留到赛后）；字幕**中上英下**；数字人 **B 方案**（静音原台词 + 新旁白覆盖）。
+> **已取消**：证据段"把脉开场"（含 200 元电话咨询私人信息）整段不用；"产品一瞥（自动弹页面）"镜头取消。
+> 用法：剪映"文本朗读"，选电影感英文 AI 音色，按段粘贴；时间为对齐参考，以剪映实录微调。
+
+## 一、电影叙事段（0:00–1:21，画面全保留）
+
+| 时间 | 位置 | 英文定稿 |
+|---|---|---|
+| 0:00–0:10 | 片头 | Every exhibit waits for someone who understands it. |
+| 0:15–0:23 | 镜2 | You stand before it — one pane of glass, a thousand years apart. |
+| 0:23–0:26 | 标题卡A | The problem: behind glass, stories stay silent. |
+| 0:48–0:51 | 标题卡B | The rabbit arrives — not a narrator, but a guide who asks. |
+| 0:50–1:03 | 数字人段（B 方案旁白覆盖此段） | The ancients fired moonlight into porcelain. Today, a chip lets the craftsmen of a thousand years ago speak again. |
+| 1:18–1:21 | 标题卡C | From one object, an entire era. |
+
+## 二、证据段（1:21–3:46，甲方已剪 6 段：反差开场/帧一/帧二/帧三/帧四/护栏加映）
+
+| 时间 | 帧 | 英文定稿 |
+|---|---|---|
+| （反差开场无口播） | 1_反差开场 | —（无字幕无口播，纯画面） |
+| 1:21–1:41 | 2_帧一 · 造得出 | The first one, we talked for a long while. When we finished, I didn't save the conversation — I saved the path. |
+| 1:41–1:56 | 2_帧一 · 造得出 | New exhibit, one sentence — it knows what to do. |
+| 1:56–2:11 | 3_帧二 · 换得动 | Swap the brain, change three values. |
+| 2:11–2:26 | 3_帧二 · 换得动 | But interface compatibility doesn't equal behavioral equivalence — so we ran a regression test. |
+| 2:26–2:41 | 3_帧二 · 换得动 | And honestly: we replicate the interface contract, not the container. We compare behavior, not deployment. |
+| 2:41–3:01 | 4_帧三 · 信得过 | The official skill's signature verifies. Our own skill's signature verifies too. Now, I change one byte. |
+| 3:01–3:11 | 4_帧三 · 信得过 | It refuses.（FAILED 处停 2 秒） |
+| 3:11–3:31 | 4_帧三 · 信得过 | Trust comes not from registry badges, but from verifiable integrity. |
+| 3:31–3:46 | 6_护栏加映 | Three red lines — authentication, appraisal, trade — blocked by NVIDIA's official guardrails. |
+
+> 注：5_帧四 · 有用吗 更新版字幕中**无对应字幕条**（9 条里没有帧四台词），口播该段暂挂"只念实测数字"（见第三节），请甲方确认帧四是否要补字幕。
+
+## 三、跑分卡 + 片尾（3:46–3:57）
+
+| 时间 | 位置 | 英文定稿 |
+|---|---|---|
+| 3:46–3:54 | 国风跑分卡（DGX Spark + Step 5 + Tier-3 实测数字，今晚回填，不预填） | Same task, with and without the skill, run twice. The difference is its contribution.（念一个最漂亮的实测数字；没跑完就如实说"this dimension isn't finished yet"，绝不念估计值） |
+| 3:54–3:57 | 月亮环抱兔 logo | An object has a soul, for it is not alone. |
+
+## 四、朗读纪律（沿用 AMD 录屏纪律）
+
+1. 语速比平时慢 15%；FAILED 处停 2 秒；
+2. 两路录制：屏幕 + 口播分开录，后期再合；
+3. 发布前三查：无密钥 / 无真名 / 无外网 IP 端口；文末标注「AI 生成」。
