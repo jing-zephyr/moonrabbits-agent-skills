@@ -6,7 +6,7 @@
   },
   "local": {
     "reachable": true,
-    "model": "/home/asus_gx10/models/Qwen3.6-35B-A3B-FP8",
+    "model": "~/models/Qwen3.6-35B-A3B-FP8",
     "ms": 451,
     "output": "知识库未找到",
     "usage": {
