@@ -1,0 +1,44 @@
+1
+00:00:00,000 --> 00:00:20,000
+第一件，我们聊了很久。聊完我没有把这段对话存下来——我把这条路径存下来了。
+The first one, we talked for a long while. When we finished, I didn't save the conversation — I saved the path.
+
+2
+00:00:20,000 --> 00:00:35,000
+换一件东西，一句话，它自己知道该干什么。
+New exhibit, one sentence — it knows what to do.
+
+3
+00:00:35,000 --> 00:00:50,000
+换一颗大脑，改三个值。
+Swap the brain, change three values.
+
+4
+00:00:50,000 --> 00:01:05,000
+但接口兼容不等于行为等价——所以我们做了回归评测。
+But interface compatibility doesn't equal behavioral equivalence — so we ran a regression test.
+
+5
+00:01:05,000 --> 00:01:20,000
+诚实说一句：这里复刻的是接口契约，没有跑它的容器。我们比较的是行为，不是部署形态。
+And honestly: we replicate the interface contract, not the container. We compare behavior, not deployment.
+
+6
+00:01:20,000 --> 00:01:40,000
+官方技能的签名，验得过。我们自己技能的签名，也验得过。现在，我改它一个字节。
+The official skill's signature verifies. Our own skill's signature verifies too. Now, I change one byte.
+
+7
+00:01:40,000 --> 00:01:50,000
+它不认了。
+It refuses.
+
+8
+00:01:50,000 --> 00:02:10,000
+信任不来自注册表的徽章，来自可验证的完整性。
+Trust comes not from registry badges, but from verifiable integrity.
+
+9
+00:02:10,000 --> 00:02:25,000
+三条红线：鉴定、估价、交易——用 NVIDIA 官方护栏拦住。
+Three red lines — authentication, appraisal, trade — blocked by NVIDIA's official guardrails.
