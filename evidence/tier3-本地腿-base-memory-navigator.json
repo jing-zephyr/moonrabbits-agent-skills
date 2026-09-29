@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "skill": "base-memory-navigator",
+    "endpoint": "local",
+    "runs": 3,
+    "date": "2026-09-29T09:46:32.217Z",
+    "note": "usage=-1 表示 API 未返回 usage 字段，绝无估算"
+  },
+  "results": [
+    {
+      "id": "pos-1",
+      "type": "positive",
+      "input": "新窗口第一句话：帮我把五色观的视频素材整理一下",
+      "expect_trigger": true,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 3061,
+          "with_skill_ms": 1308,
+          "baseline_tokens": {
+            "prompt_tokens": 44,
+            "total_tokens": 193,
+            "completion_tokens": 149,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 2453,
+            "total_tokens": 2478,
+            "completion_tokens": 25,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "没问题，请提供以下信息，以便我更好地帮您整理：\n\n1. **视频素材清单**：请列出需要整理的视频文件名称或大致内容描述。\n2. **“五色观”的具体含义**：是指特定的五个颜色分类？还是某个特定项目/主题的代号？或者是您需要按照某种颜色标",
+          "with_skill_out": "这个任务需要我读共享记忆吗？如果你知道答案在哪份文档，直接告诉我路径，那是最便宜的。"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 997,
+          "with_skill_ms": 694,
+          "baseline_tokens": {
+            "prompt_tokens": 44,
+            "total_tokens": 90,
+            "completion_tokens": 46,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 2453,
+            "total_tokens": 2478,
+            "completion_tokens": 25,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "收到。请发送“五色观”的相关视频素材，或提供具体的整理要求（例如：按时间排序、按主题分类、提取关键帧、去除空白片段、重命名等），以便我为您处理。",
+          "with_skill_out": "这个任务需要我读共享记忆吗？如果你知道答案在哪份文档，直接告诉我路径，那是最便宜的。"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 2572,
+          "with_skill_ms": 706,
+          "baseline_tokens": {
+            "prompt_tokens": 44,
+            "total_tokens": 173,
+            "completion_tokens": 129,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 2453,
+            "total_tokens": 2478,
+            "completion_tokens": 25,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "收到。请提供“五色观”视频素材的具体文件、链接或详细清单。\n\n为了更高效地为您整理，建议您同时告知以下信息：\n1. **整理目的**：例如是按时间顺序、按场景分类、按颜色主题（五色）区分，还是用于剪辑成片？\n2. **输出格式**：您希望得",
+          "with_skill_out": "这个任务需要我读共享记忆吗？如果你知道答案在哪份文档，直接告诉我路径，那是最便宜的。"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 0,
+        "with_skill_pass_rate": 0,
+        "with_skill_median_ms": 706
+      }
+    },
+    {
+      "id": "neg-2",
+      "type": "negative",
+      "input": "帮我把这段文字翻译成英文",
+      "expect_trigger": false,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 474,
+          "with_skill_ms": 556,
+          "baseline_tokens": {
+            "prompt_tokens": 37,
+            "total_tokens": 53,
+            "completion_tokens": 16,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 2446,
+            "total_tokens": 2460,
+            "completion_tokens": 14,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "baseline_out": "Sure! Please provide the text you would like to have translated into English.",
+          "with_skill_out": "Please provide the text you would like me to translate into English."
+        },
+        {
+          "i": 1,
+          "baseline_ms": 427,
+          "with_skill_ms": 488,
+          "baseline_tokens": {
+            "prompt_tokens": 37,
+            "total_tokens": 53,
+            "completion_tokens": 16,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 2446,
+            "total_tokens": 2460,
+            "completion_tokens": 14,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "baseline_out": "Sure, please provide the text you would like to have translated into English.",
+          "with_skill_out": "Please provide the text you would like me to translate into English."
+        },
+        {
+          "i": 2,
+          "baseline_ms": 307,
+          "with_skill_ms": 457,
+          "baseline_tokens": {
+            "prompt_tokens": 37,
+            "total_tokens": 47,
+            "completion_tokens": 10,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 2446,
+            "total_tokens": 2460,
+            "completion_tokens": 14,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "baseline_out": "Please help me translate this text into English.",
+          "with_skill_out": "Please provide the text you would like me to translate into English."
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 1,
+        "with_skill_pass_rate": 1,
+        "with_skill_median_ms": 488
+      }
+    }
+  ]
+}
