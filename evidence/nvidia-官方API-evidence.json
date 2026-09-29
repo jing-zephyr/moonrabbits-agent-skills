@@ -1,0 +1,17 @@
+﻿{
+    "date":  "2026-09-29T18:38:11.0587482+08:00",
+    "note":  "NVIDIA 官方 API（integrate.api.nvidia.com）直连实测；密钥不落盘",
+    "chat":  {
+                 "reachable":  false,
+                 "note":  "{\"id\":\"bea415629e856d4a\",\"choices\":[{\"index\":0,\"message\":{\"content\":null,\"refusal\":null,\"role\":\"assistant\",\"reasoning_content\":\"我们需要回答用户中文请求：“用一句话介绍 NVIDIA Agent Skills。” 需要一句话介绍 NVIDIA Agent Skills。我"
+             },
+    "guard":  {
+                  "reachable":  false,
+                  "note":  "{\"error\":\"Error during inference of request chat-d2ff87dc35164113a9c7b45d893cb813 -- Encountered an error in forwardAsync function: [TensorRT-LLM][ERROR] CUDA runtime error in cudaMemcpyAsync(dst, src"
+              },
+    "embedding":  {
+                      "reachable":  false,
+                      "http":  "404",
+                      "note":  "本账号无 /v1/embeddings 端点（如实记录）"
+                  }
+}
