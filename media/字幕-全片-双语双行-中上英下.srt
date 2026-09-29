@@ -1,0 +1,84 @@
+1
+00:00:00,000 --> 00:00:10,100
+每一件展品，都在等一个懂它的人。
+Every exhibit waits for someone who understands it.
+
+2
+00:00:15,200 --> 00:00:23,300
+看展的人站在展品前，隔着玻璃，隔着千百年。
+You stand before it — one pane of glass, a thousand years apart.
+
+3
+00:00:23,300 --> 00:00:26,300
+问题：隔着玻璃，故事听不见。
+The problem: behind the glass, stories stay silent.
+
+4
+00:00:47,900 --> 00:00:50,900
+灵兔来了。它不是讲解员，是一个会提问的向导。
+The rabbit arrives — not a narrator, but a guide who asks.
+
+5
+00:00:50,900 --> 00:01:03,700
+古人把月光烧进了瓷里。今天，一块芯片让千年前的匠人重新开口。
+The ancients fired moonlight into porcelain. Today, a chip lets the craftsmen of a thousand years ago speak again.
+
+6
+00:01:17,900 --> 00:01:21,000
+从一件展品，看到一个时代。
+From one object, an entire era.
+
+7
+00:01:21,000 --> 00:01:43,000
+左边这段更漂亮。右边这段更短，而且它承认自己不知道。
+The left one is prettier. The right one is shorter — and it admits it doesn't know.
+
+8
+00:01:43,000 --> 00:02:03,000
+第一件，我们聊了很久。聊完我没有把这段对话存下来——我把这条路径存下来了。
+The first one, we talked for a long while. When we finished, I didn't save the conversation — I saved the path.
+
+9
+00:02:03,000 --> 00:02:18,000
+换一件东西，一句话，它自己知道该干什么。
+New exhibit, one sentence — it knows what to do.
+
+10
+00:02:18,000 --> 00:02:33,000
+换一颗大脑，改三个值。
+Swap the brain, change three values.
+
+11
+00:02:33,000 --> 00:02:48,000
+但接口兼容不等于行为等价——所以我们做了回归评测。
+But interface compatibility doesn't equal behavioral equivalence — so we ran a regression test.
+
+12
+00:02:48,000 --> 00:03:04,000
+诚实说一句：这里复刻的是接口契约，没有跑它的容器。我们比较的是行为，不是部署形态。
+And honestly: we replicate the interface contract, not the container. We compare behavior, not deployment.
+
+13
+00:03:04,000 --> 00:03:24,000
+官方技能的签名，验得过。我们自己技能的签名，也验得过。现在，我改它一个字节。
+The official skill's signature verifies. Our own skill's signature verifies too. Now, I change one byte.
+
+14
+00:03:24,000 --> 00:03:34,000
+它不认了。
+It refuses.
+
+15
+00:03:34,000 --> 00:03:54,000
+信任不来自注册表的徽章，来自可验证的完整性。
+Trust comes not from registry badges, but from verifiable integrity.
+
+16
+00:04:00,000 --> 00:04:20,000
+同一件事，装与不装，跑两遍——差值就是它的贡献。
+Same task, with and without the skill, run twice. The difference is its contribution.
+
+17
+00:04:42,000 --> 00:05:02,000
+三条红线：鉴定、估价、交易——用 NVIDIA 官方护栏拦住。
+Three red lines — authentication, appraisal, trade — blocked by NVIDIA's official guardrails.
