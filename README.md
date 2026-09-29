@@ -39,7 +39,7 @@
 | # | 材料 | 位置 |
 |---|---|---|
 | ① | 项目说明（≥500 字） | 本 README §三 |
-| ② | 部署说明 | 本 README §四 |
+| ② | 部署说明 | 本 README §四 ｜ **在线演示（公网）：https://moonrabbits-narrative-guide.netlify.app** （入口页 / 系统演示 / 作品展示页） |
 | ③ | 技术栈说明（NVIDIA SDK / 模型 / StepFun） | 本 README §五 + [`NVIDIA-STACK.md`](NVIDIA-STACK.md) |
 | ④ | 演示视频 | **▶ [B 站：灵兔文脉 MoonRabbits｜让每一句讲解都有出处](https://www.bilibili.com/video/BV16vaW6EEic/)** ｜ 结构与自查见 [`media/README.md`](media/README.md) |
 | ⑤ | 赛事征文 · 十日谈 | **▶ [知乎：十日谈 · 灵兔文脉 MoonRabbits](https://zhuanlan.zhihu.com/p/2088415588293010984)** ｜ 篇目见 [`docs/提交-征文-十日谈.md`](docs/提交-征文-十日谈.md) |
