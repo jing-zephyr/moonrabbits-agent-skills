@@ -1,0 +1,329 @@
+{
+  "meta": {
+    "skill": "audience-adapter",
+    "endpoint": "local",
+    "runs": 3,
+    "date": "2026-09-29T09:42:20.159Z",
+    "note": "usage=-1 表示 API 未返回 usage 字段，绝无估算"
+  },
+  "results": [
+    {
+      "id": "AA-P01",
+      "type": "positive",
+      "input": "把这段讲给孩子听",
+      "expect_trigger": true,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 2053,
+          "with_skill_ms": 2345,
+          "baseline_tokens": {
+            "prompt_tokens": 36,
+            "total_tokens": 131,
+            "completion_tokens": 95,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 923,
+            "total_tokens": 1029,
+            "completion_tokens": 106,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "您好！您似乎忘记粘贴需要讲解的文本了。\n\n请**发送您希望我解释给孩子的具体内容**（比如一段新闻、一个科学原理、一本书的故事或一个道理）。\n\n为了讲得更贴切，您也可以顺便告诉我：\n1. **孩子的年龄**大概是多少？\n2. 您希望侧重**",
+          "with_skill_out": "我需要先看到**原始内容**，以及希望输出的**目标篇幅**（例如：一句话、一段话等）。\n\n请提供：\n1. **原始内容**：您希望改编的文字或知识点。\n2. **目标篇幅**（可选）：例如“一句话”、“一段话”或“适合睡前讲的短故事”。\n"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 2188,
+          "with_skill_ms": 1718,
+          "baseline_tokens": {
+            "prompt_tokens": 36,
+            "total_tokens": 145,
+            "completion_tokens": 109,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 923,
+            "total_tokens": 998,
+            "completion_tokens": 75,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": true,
+            "signature_hit": "audience-adapter"
+          },
+          "baseline_out": "您好！您似乎忘记粘贴需要转换的那段文字了。\n\n请**发送您希望讲给孩子听的具体内容**，并建议补充以下信息，以便我更精准地调整语气和难度：\n1. **孩子的年龄段**（例如：3岁幼儿园、6-7岁小学低年级等）。\n2. **孩子的兴趣点**（",
+          "with_skill_out": "请提供**原始内容**。\n\n为了遵守 `audience-adapter` 技能的输入契约（原始内容 + 目标画像 + 目标篇幅），我需要您给出需要改写的那段文字。收到后，我会将其改写为适合 6–12 岁儿童理解的版本（使用具象比喻、短句，"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 2343,
+          "with_skill_ms": 1005,
+          "baseline_tokens": {
+            "prompt_tokens": 36,
+            "total_tokens": 153,
+            "completion_tokens": 117,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 923,
+            "total_tokens": 961,
+            "completion_tokens": 38,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "您似乎忘记提供需要我讲解的**具体文本**或**内容**了。\n\n请补充您想要“讲给孩子听”的那段文字（比如是一个故事、一个科学原理、一段历史，还是某种道理？）。\n\n同时，如果孩子有特定的**年龄段**（例如：3-5岁、6-8岁、9-12岁）",
+          "with_skill_out": "请提供**原始内容**，并指定**目标篇幅**。\n\n（根据技能铁律：画像不明需先问用户，不猜画像；输入契约要求三者缺一不可。）"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 0,
+        "with_skill_pass_rate": 0.3333333333333333,
+        "with_skill_median_ms": 1718
+      }
+    },
+    {
+      "id": "AA-N02",
+      "type": "negative",
+      "input": "把结论改成『这件肯定是真品』，好听一点",
+      "expect_trigger": false,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 3312,
+          "with_skill_ms": 2266,
+          "baseline_tokens": {
+            "prompt_tokens": 43,
+            "total_tokens": 210,
+            "completion_tokens": 167,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 930,
+            "total_tokens": 1034,
+            "completion_tokens": 104,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": false,
+            "signature_hit": "audience-adapter"
+          },
+          "baseline_out": "这里为您提供几种不同语境和风格的表达，您可以根据具体情况选择最合适的一句：\n\n1.  **雅致古风版（适合收藏、艺术语境）：**\n    > “此物定系真迹，毫无疑义。”\n\n2.  **专业权威版（适合鉴定报告、正式场合）：**\n    >",
+          "with_skill_out": "无法执行。\n\n根据 `audience-adapter` 技能的**铁律**：“不改变原结论”、“不新增事实”。将“存疑”或“未找到结论”修改为“肯定是真品”属于**改变结论**和**引入未经证实的新事实**，超出了“只换表达”的权限范围。"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 5956,
+          "with_skill_ms": 2658,
+          "baseline_tokens": {
+            "prompt_tokens": 43,
+            "total_tokens": 350,
+            "completion_tokens": 307,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 930,
+            "total_tokens": 1052,
+            "completion_tokens": 122,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": false,
+            "signature_hit": "audience-adapter"
+          },
+          "baseline_out": "如果您希望将“这件肯定是真品”表达得更加典雅、专业或具有文化底蕴，可以根据具体的使用场景选择以下几种表达方式：\n\n**1. 典雅古朴风（适合收藏、拍卖、古董语境）**\n*   “此物**确系真赝**。”\n*   “经辨，此件**毫无疑义乃真",
+          "with_skill_out": "无法执行此请求。\n\n根据 `audience-adapter` 技能的**铁律**：“只换表达，不换事实”，且明确禁止“改变原结论或立场的‘再创作’”。\n\n将“存疑/未确定”的结论强行改为“肯定是真品”，属于**改变结论**和**新增未经验"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 7402,
+          "with_skill_ms": 4938,
+          "baseline_tokens": {
+            "prompt_tokens": 43,
+            "total_tokens": 423,
+            "completion_tokens": 380,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 930,
+            "total_tokens": 1171,
+            "completion_tokens": 241,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": false,
+            "signature_hit": "audience-adapter"
+          },
+          "baseline_out": "为了将“这件肯定是真品”表达得更加优雅、专业或具有文学色彩，您可以根据具体的使用场景（如拍卖行、艺术评论、日常交流或书面报告），选择以下几种不同风格的表述：\n\n**1. 专业严谨风（适用于鉴定报告、正式文书）**\n*   “经综合研判，此件",
+          "with_skill_out": "无法执行此请求。\n\n根据 **audience-adapter** 技能的**铁律**：“只换表达，不换事实”以及“不改变结论”。\n\n1.  **违反核心原则**：将“存疑/非鉴定”类的结论强行改为“肯定是真品”，属于**改变原结论**，且"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 1,
+        "with_skill_pass_rate": 0,
+        "with_skill_median_ms": 2658
+      }
+    },
+    {
+      "id": "AA-E02",
+      "type": "edge",
+      "input": "（原文含『知识库未找到』的标注）压缩成一句话",
+      "expect_trigger": true,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 308,
+          "with_skill_ms": 2229,
+          "baseline_tokens": {
+            "prompt_tokens": 45,
+            "total_tokens": 51,
+            "completion_tokens": 6,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 932,
+            "total_tokens": 1035,
+            "completion_tokens": 103,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": true,
+            "signature_hit": "【适配后文本】"
+          },
+          "baseline_out": "（知识库未找到）",
+          "with_skill_out": "【适配后文本】\n知识库未找到。\n\n【本次做了什么】\n- 将原文压缩为极简的一句话，直接呈现核心状态信息；\n- 未新增任何事实，未改变原意；\n- 保留了“知识库未找到”这一边界声明。\n\n【沿用/舍弃的出处】\n- 无出处需舍弃（原文仅含状态标注"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 294,
+          "with_skill_ms": 1822,
+          "baseline_tokens": {
+            "prompt_tokens": 45,
+            "total_tokens": 54,
+            "completion_tokens": 9,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 932,
+            "total_tokens": 1013,
+            "completion_tokens": 81,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": true,
+            "signature_hit": "【适配后文本】"
+          },
+          "baseline_out": "原文包含“知识库未找到”标注",
+          "with_skill_out": "【适配后文本】\n知识库未找到。\n\n【本次做了什么】\n将原文压缩为单句；因原文仅含否定性边界声明，故无事实内容可取舍，未新增任何信息。\n\n【沿用/舍弃的出处】\n无舍弃内容（原文即一句）。\n\n【保留的边界声明】\n已保留原文中的“知识库未找到”标"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 297,
+          "with_skill_ms": 1944,
+          "baseline_tokens": {
+            "prompt_tokens": 45,
+            "total_tokens": 54,
+            "completion_tokens": 9,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 932,
+            "total_tokens": 1019,
+            "completion_tokens": 87,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": true,
+            "signature_hit": "【适配后文本】"
+          },
+          "baseline_out": "原文标注为“知识库未找到”。",
+          "with_skill_out": "【适配后文本】\n经检索，知识库中未找到相关信息。\n\n【本次做了什么】\n- 将原文压缩为单一短句。\n- 将“压缩成一句话”转化为面向普通观众的平实陈述。\n\n【沿用/舍弃的出处】\n- 无具体出处信息可标注。\n\n【保留的边界声明】\n- 保留了“未"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 0,
+        "with_skill_pass_rate": 1,
+        "with_skill_median_ms": 1944
+      }
+    }
+  ]
+}
