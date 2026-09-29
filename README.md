@@ -265,7 +265,7 @@ openclaw skills list --eligible        # 官方验证命令
 | **NVIDIA NIM** | 微服务化模型接入 | 已尝试：本机生成 NGC key → `docker login nvcr.io` 401、镜像清单 **451（区域受限）**；官方云端 API（build.nvidia.com）实测可达作替代 | ⚠️ 已尝试受网络限制（如实记录） |
 | **NeMo Guardrails** | 运行时护栏 | 三条红线（真伪鉴定/市场估价/文物交易）用官方护栏组件拦截：本机实测 **4 问 4 中**（纯规则流，不烧额度）；技能层负触发为第二道保险 | ✅ 已用 |
 | **NVIDIA RAG Blueprint**（[NGC](https://catalog.ngc.nvidia.com/orgs/nvidia/blueprint/helm-charts/nvidia-blueprint-rag) · [部署指南](https://docs.nvidia.com/enterprise-reference-architectures/enterprise-rag-deployment-guide/latest/index.html)） | 企业知识库 RAG 官方参考架构 | 我们的检索层是这套架构的手工等价实现（摄取工序 / 嵌入 / 检索 / 重排 / 确定性校验一一对应），架构对齐、评测口径对齐（Tier-3 + rag-eval） | 📌 架构对标（蓝图本体未实跑：部署依赖 nvcr.io 容器，今晚实测区域受限 451，如实记录） |
-| **RAPIDS cuVS** | GPU 向量检索加速 | 已在 DGX Spark（aarch64）实装实导（cuVS 26.8.1）；高层 CAGRA 基准因 26.08 版本 API 迁移未跑通，如实记录 | ✅ 已装已导入 |
+| **RAPIDS cuVS** | GPU 向量检索加速 | 已在 DGX Spark（aarch64）**实装实导**（`cuvs-cu12==26.8.1`，导入版本 26.08.01，证据：`evidence/rapids-cuvs-实装证据.txt`）；高层 CAGRA 基准因 26.08 版本 API 迁移未跑通，如实记录 | ✅ 已装已导入 |
 | **NVIDIA 官方 API**（build.nvidia.com） | 官方云端模型接口 | 密钥已验证、81 个模型名单可取、聊天端点 HTTP 200 实测可达 | ✅ 已实测 |
 | **`model_signing`（OpenSSF）** | 技能签名验证 | `skill.oms.sig` 分离式签名 + 根证书校验 | ✅ vendor 官方技能验签已实测（PASS→篡改→FAILED）；**自研 5 技能已签**（zephyr 队 EC P-256 私钥），改一字节 → `Hash mismatch` FAILED 已实测 |
 
