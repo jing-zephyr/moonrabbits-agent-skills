@@ -255,6 +255,22 @@ def verify(text: str = "",
             "note": "上游声明的冲突：两条都列出，不得只取其一",
         }])
 
+    # ---- 冲突去重 ----
+    # 同一对来源可能在两处被检出（单句内部检索 + 上游显式提供），只报一次，避免重复行
+    _seen_conf = set()
+    _deduped = []
+    for _f in conflict_list:
+        _key = (
+            _f.get("type"),
+            (_f.get("a") or {}).get("name"),
+            (_f.get("b") or {}).get("name"),
+        )
+        if _key in _seen_conf:
+            continue
+        _seen_conf.add(_key)
+        _deduped.append(_f)
+    conflict_list = _deduped
+
     # ---- 证据分 ----
     coverage = (graded_sentence_count / len(sentences)) if sentences else 0.0
     mean_confidence = (sum(all_conf_values) / len(all_conf_values)) \
