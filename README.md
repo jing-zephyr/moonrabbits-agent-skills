@@ -181,11 +181,11 @@ node scripts/pre-push-check.mjs
 | 优化点 | 做法 | 状态 |
 |---|---|---|
 | **上下文经济** | 三层渐进式披露：常驻仅 `name`+`description` ≈100 token/技能；官方原话「没有人会全装 343 个技能，按需安装 + 目录路由才是工程上的正确解」 | ✅ 已实施 |
-| **成本优化** | 轻量任务走本地模型（零 API 成本），重推理走云端；Step 5 Preview 官方口径「每任务成本比相近智能模型低约 65%」 | ✅ 架构就位 ⏳ 数据待测 |
+| **成本优化** | 轻量任务走本地模型（零 API 成本），重推理走云端；Step 5 Preview 官方口径「每任务成本比相近智能模型低约 65%」 | ✅ 已实测：本地 646 ms vs 云端 16.3 s（双端点同题对照，见 `evidence/`）；云端全量 53 例已跑 |
 | **GB10 推理适配** | 必须 `VLLM_USE_DEEP_GEMM=0` + `--moe-backend triton`，否则 `CUDA_ERROR_INVALID_IMAGE` | ✅ 已验证 |
 | **推理模型 token 坑** | `step-5-preview` 给 `max_tokens=16` 时 token 全被 `reasoning` 吃掉 → `content` 为空；已固化为默认 1024 + 空了自动放大 4 倍重试 | ✅ 已验证 |
 | **检索质量** | 查询与入库必须同用 `bge-large-zh-v1.5`；库内 ASR 谐音脏数据用 fail-closed 缓解而非消除 | ✅ 已实施 |
-| **推理引擎加速** | TensorRT-LLM / NIM | ⏳ **待确认（不沿用"规划中"的表述，无法核实即不写）** |
+| **推理引擎加速** | TensorRT-LLM / NIM | 📌 roadmap：本次**实跑 vLLM 0.28.0**；NIM 容器已尝试（受 nvcr.io 区域限制 451，如实记录），TensorRT-LLM 未实跑 |
 
 ---
 
@@ -261,8 +261,8 @@ openclaw skills list --eligible        # 官方验证命令
 | **DGX Spark（GB10）** | 主硬件平台，121 GiB 统一内存 | 承载本地模型、知识库、技能编排全部组件 | ✅ 已用 |
 | **CUDA 13.0** | GPU 计算支持 | 随 GB10 驱动 580.142 提供，支撑 vLLM 推理 | ✅ 已用 |
 | **vLLM 0.28.0** | 推理服务（OpenAI 兼容端点） | 承载 Qwen3.6-35B-A3B-FP8，关键参数见 §4.2 | ✅ 已用 |
-| **TensorRT-LLM** | 推理加速 | — | ⏳ 待确认 |
-| **NVIDIA NIM** | 微服务化模型接入 | Step 3.7 Flash Day-0 上线 NIM（官方口径）；我们是否走 NIM 端点 | ⏳ 待确认 |
+| **TensorRT-LLM** | 推理加速 | 本次以 vLLM 0.28.0 实跑（GB10 双参数已验证）；官方引擎列为下一步 | 📌 roadmap（未实跑，如实注明） |
+| **NVIDIA NIM** | 微服务化模型接入 | 已尝试：本机生成 NGC key → `docker login nvcr.io` 401、镜像清单 **451（区域受限）**；官方云端 API（build.nvidia.com）实测可达作替代 | ⚠️ 已尝试受网络限制（如实记录） |
 | **NeMo Guardrails** | 运行时护栏 | 三条红线（真伪鉴定/市场估价/文物交易）用官方护栏组件拦截：本机实测 **4 问 4 中**（纯规则流，不烧额度）；技能层负触发为第二道保险 | ✅ 已用 |
 | **NVIDIA RAG Blueprint**（[NGC](https://catalog.ngc.nvidia.com/orgs/nvidia/blueprint/helm-charts/nvidia-blueprint-rag) · [部署指南](https://docs.nvidia.com/enterprise-reference-architectures/enterprise-rag-deployment-guide/latest/index.html)） | 企业知识库 RAG 官方参考架构 | 我们的检索层是这套架构的手工等价实现（摄取工序 / 嵌入 / 检索 / 重排 / 确定性校验一一对应），架构对齐、评测口径对齐（Tier-3 + rag-eval） | 📌 架构对标（蓝图本体未实跑：部署依赖 nvcr.io 容器，今晚实测区域受限 451，如实记录） |
 | **RAPIDS cuVS** | GPU 向量检索加速 | 已在 DGX Spark（aarch64）实装实导（cuVS 26.8.1）；高层 CAGRA 基准因 26.08 版本 API 迁移未跑通，如实记录 | ✅ 已装已导入 |
@@ -332,8 +332,8 @@ openclaw skills list --eligible        # 官方验证命令
 
 | 帧 | 证据 | 状态 |
 |---|---|---|
-| **造得出** | 技能命中日志行（换第二件展品，一句话仍能触发） | ⏳ 待录（`evidence/`） |
-| **换得动** | 本地 vLLM ↔ `api.stepfun.com` 双端点对照（并口播"复刻的是接口契约，没跑它的容器"） | ⏳ 待录；同题实测已就绪：本地 646 ms 拒答「知识库未找到」vs 云端 16.3 s 通用回答（2026-09-29） |
+| **造得出** | 技能命中日志行（换第二件展品，一句话仍能触发） | ✅ 已录制并入片（B 站）；证据见 `evidence/frame1-local-*.txt` |
+| **换得动** | 本地 vLLM ↔ `api.stepfun.com` 双端点对照 | ✅ 已录制并入片（B 站）；同题实测：本地 646 ms 拒答「知识库未找到」vs 云端 16.3 s 通用回答，数据见 `evidence/frame2-双端点对照-20260929.json` |
 | **信得过** | ① 官方 `model_signing verify` + 根证书：vendor 官方技能验签 **PASS → 篡改一字节 → FAILED（已实测）** ② 自研完整性锁 `verify-lock.mjs`（sha256，篡改即 FAILED，已实测） ③ **自研 5 技能 `skill.oms.sig`：验证 PASS → 改一字节 → `Hash mismatch` FAILED（2026-09-29 已实测）** | ✅ ①②③ 全部实测 |
 | **有用吗**（我们的加码） | Tier-3 五维 BENCHMARK：baseline vs with skill 差值 | ✅ 本地腿 5 组真数回填（失败项如实公开）+ 云端全量 **53 例**对照落盘（严格判卷结果照实记录） |
 
