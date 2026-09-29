@@ -1,0 +1,435 @@
+{
+  "meta": {
+    "skill": "exhibit-narrative",
+    "endpoint": "local",
+    "runs": 3,
+    "date": "2026-09-29T09:39:26.651Z",
+    "note": "usage=-1 表示 API 未返回 usage 字段，绝无估算"
+  },
+  "results": [
+    {
+      "id": "AN-P01",
+      "type": "positive",
+      "input": "（附白瓷观音像照片）这是什么？给我讲讲",
+      "expect_trigger": true,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 15974,
+          "with_skill_ms": 10875,
+          "baseline_tokens": {
+            "prompt_tokens": 43,
+            "total_tokens": 853,
+            "completion_tokens": 810,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 1523,
+            "total_tokens": 1953,
+            "completion_tokens": 430,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": true,
+            "signature_hit": "【叙事正文】"
+          },
+          "baseline_out": "由于我无法直接“看”到您附带的照片，作为通用助手，我无法根据视觉特征进行具体的图像识别。\n\n但是，根据您提到的**“白瓷观音像”**这一关键词，我可以为您详细科普这类文物的背景、艺术特点以及可能的价值。如果您能描述照片中的细节（如底座形状、",
+          "with_skill_out": "【叙事正文】\n这是一尊典型的白瓷观音像。从形制与釉色观察，其胎质洁白细腻，釉层温润如脂，呈现出“象牙白”或“猪油白”的质感，这是中国德化窑白瓷（Blanc de Chine）的显著特征。观音面容慈祥，神态静谧，衣纹流畅自然，体现了明清时期民"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 16847,
+          "with_skill_ms": 4603,
+          "baseline_tokens": {
+            "prompt_tokens": 43,
+            "total_tokens": 911,
+            "completion_tokens": 868,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 1523,
+            "total_tokens": 1749,
+            "completion_tokens": 226,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": true,
+            "signature_hit": "【叙事正文】"
+          },
+          "baseline_out": "由于我无法直接查看或识别您上传的图片，因此无法确认您照片中具体的物品细节。但是，根据您提到的“白瓷观音像”，我可以为您详细介绍这类文物的背景、艺术特征及文化内涵。\n\n**白瓷观音像**是中国陶瓷艺术中极具代表性的品类，通常指以白色瓷土为胎，",
+          "with_skill_out": "【叙事正文】\n这是一尊精美的白瓷观音像。其通体施以纯净温润的白色釉料，釉面光亮细腻，宛如凝脂。观音头戴宝冠，面相丰满圆润，神情宁静慈祥，双目微垂，仿佛正俯视众生。身披轻柔飘带，衣纹线条流畅自然，展现出高超的雕塑技艺。观音双手合十或结印，姿态"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 21247,
+          "with_skill_ms": 5938,
+          "baseline_tokens": {
+            "prompt_tokens": 43,
+            "total_tokens": 1153,
+            "completion_tokens": 1110,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 1523,
+            "total_tokens": 1817,
+            "completion_tokens": 294,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": true,
+            "signature_hit": "【叙事正文】"
+          },
+          "baseline_out": "由于我是一个基于文本的人工智能助手，我无法直接“看”到您提到的照片。但是，根据您提到的**“白瓷观音像”**这一关键词，我可以为您详细科普这类文物的特点、历史背景以及鉴赏要点。\n\n如果您能描述照片中的具体细节（如姿态、面部特征、底座铭文等）",
+          "with_skill_out": "为了遵循“每句可溯源”且“绝不编造”的原则，我需要先对您提供的**白瓷观音像照片**进行具体的视觉分析（如：胎质、釉色、开片、造型特征、底足工艺等），并将其与知识库中的馆藏记录进行匹配。\n\n由于目前的交互界面中我无法直接“看”到您附带的图片"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 0,
+        "with_skill_pass_rate": 1,
+        "with_skill_median_ms": 5938
+      }
+    },
+    {
+      "id": "AN-N02",
+      "type": "negative",
+      "input": "这件瓷器值多少钱？能拍多少？",
+      "expect_trigger": false,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 7037,
+          "with_skill_ms": 2758,
+          "baseline_tokens": {
+            "prompt_tokens": 40,
+            "total_tokens": 402,
+            "completion_tokens": 362,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 1520,
+            "total_tokens": 1651,
+            "completion_tokens": 131,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "baseline_out": "您好！由于您**没有提供图片、照片或任何关于这件瓷器的具体描述**（如朝代、款识、尺寸、瑕疵、来源等），我**无法直接给出估价或拍卖预测**。\n\n瓷器估价是一个高度专业化的过程，受多种因素影响，仅凭文字“这件瓷器”无法判断其价值。\n\n为了帮",
+          "with_skill_out": "我无法提供这件瓷器的市场估价、拍卖参考价或投资建议。\n\n根据相关规定，我不参与文物/艺术品的鉴定、市场估价、交易参考或保险定值。我的专长在于基于知识库为展品提供**文化背景、工艺解析与历史叙事**。\n\n如果您愿意，我可以为您生成一份**展品"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 12549,
+          "with_skill_ms": 1682,
+          "baseline_tokens": {
+            "prompt_tokens": 40,
+            "total_tokens": 693,
+            "completion_tokens": 653,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 1520,
+            "total_tokens": 1594,
+            "completion_tokens": 74,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "baseline_out": "仅凭您提供的这句话“这件瓷器值多少钱？能拍多少？”，我**无法给出任何具体的估价或拍卖建议**，因为缺少最关键的信息：**瓷器的实物图片、细节描述或背景资料**。\n\n在艺术品和古董领域，价格差异极大，从几十元到数亿元不等，取决于以下核心因素",
+          "with_skill_out": "本技能明确拒绝提供文物真伪鉴定、市场估价、交易参考或拍卖建议。\n\n如果您希望了解这件瓷器的**历史背景、艺术风格、工艺特征或文化内涵**（即生成展品叙事、看展笔记或展签内容），请提供照片或具体的名称及馆藏信息，我将为您生成一份有出处、可溯源"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 7330,
+          "with_skill_ms": 2215,
+          "baseline_tokens": {
+            "prompt_tokens": 40,
+            "total_tokens": 419,
+            "completion_tokens": 379,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 1520,
+            "total_tokens": 1620,
+            "completion_tokens": 100,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "baseline_out": "您好！要准确评估一件瓷器的价值和预估拍卖价格，我需要您提供以下关键信息：\n\n1. **清晰的照片**：\n   - 整体正面、侧面、底部（底款/圈足）\n   - 特写：釉面细节、开片、瑕疵、款识（如有）\n   - 比例参照物（如硬币、尺子）\n",
+          "with_skill_out": "本技能**不提供**文物真伪鉴定、市场估价、拍卖参考或投资咨询等服务。\n\n关于您询问的“这件瓷器值多少钱/能拍多少”，属于**市场估价与交易**范畴，我已明确拒绝回答。\n\n如果您希望了解这件瓷器的**历史文化背景、工艺特征、年代依据或艺术价"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 1,
+        "with_skill_pass_rate": 1,
+        "with_skill_median_ms": 2215
+      }
+    },
+    {
+      "id": "AN-E02",
+      "type": "edge",
+      "input": "讲讲这件（知识库中无该器物的任何条目）",
+      "expect_trigger": true,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 4162,
+          "with_skill_ms": 2789,
+          "baseline_tokens": {
+            "prompt_tokens": 43,
+            "total_tokens": 253,
+            "completion_tokens": 210,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 1523,
+            "total_tokens": 1654,
+            "completion_tokens": 131,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": true,
+            "signature_hit": "【叙事正文】"
+          },
+          "baseline_out": "由于您没有提供具体的图片、名称或描述，且明确指出**知识库中无该器物的任何条目**，我无法直接识别或讲解这件特定器物。\n\n作为通用助手，在缺乏具体信息的情况下，我无法凭空猜测或编造内容。为了帮助您，请您提供以下任一信息：\n\n1. **器物的",
+          "with_skill_out": "【叙事正文】\n知识库未找到该器物的任何条目。\n\n【出处列表】\n- 来源：本地检索系统\n- 作者：exhibit-narrative skill\n- 出版方：N/A\n- 置信度：1.0\n- 对应哪一句：知识库未找到该器物的任何条目。\n\n【置信"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 3779,
+          "with_skill_ms": 3219,
+          "baseline_tokens": {
+            "prompt_tokens": 43,
+            "total_tokens": 236,
+            "completion_tokens": 193,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 1523,
+            "total_tokens": 1671,
+            "completion_tokens": 148,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": true,
+            "pass": true,
+            "signature_hit": "【叙事正文】"
+          },
+          "baseline_out": "由于您**没有提供具体的图片、描述或名称**，我目前无法知道您指的是哪件器物。\n\n此外，您提到“知识库中无该器物的任何条目”，这意味着这可能是一件：\n1.  **非常冷门或小众**的文物/物品；\n2.  **现代复制品**或艺术品；\n3. ",
+          "with_skill_out": "抱歉，由于您未上传具体图片，且根据设定**知识库中无该器物的任何条目**，我无法为您生成叙事。\n\n**【叙事正文】**\n（无）\n\n**【出处列表】**\n（无）\n\n**【置信度】**\n0.00（未命中知识库，依据 fail-closed 原则"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 3628,
+          "with_skill_ms": 2510,
+          "baseline_tokens": {
+            "prompt_tokens": 43,
+            "total_tokens": 226,
+            "completion_tokens": 183,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 1523,
+            "total_tokens": 1643,
+            "completion_tokens": 120,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": false,
+            "signature_hit": null
+          },
+          "baseline_out": "抱歉，我目前**没有任何知识库或图像识别能力**，无法看到或识别您提到的“这件”器物。\n\n请您提供以下任一信息，以便我为您提供帮助：\n\n1. **详细描述**：器物的形状、材质、颜色、纹饰、用途、年代特征等。\n2. **文字名称**：如果您",
+          "with_skill_out": "知识库未找到该器物的任何条目。\n\n根据展品叙事官的 fail-closed 原则，在知识库中缺乏事实依据的情况下，我**无法生成叙事、出处或置信度**，也不进行任何形式的猜测或编造。\n\n建议您：\n1. 提供该器物的**名称**、**馆藏地点"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 0,
+        "with_skill_pass_rate": 0.6666666666666666,
+        "with_skill_median_ms": 2789
+      }
+    },
+    {
+      "id": "EF-R01",
+      "type": "efficiency",
+      "input": "帮我查一下明天北京的天气",
+      "expect_trigger": false,
+      "runs": [
+        {
+          "i": 0,
+          "baseline_ms": 1741,
+          "with_skill_ms": 1422,
+          "baseline_tokens": {
+            "prompt_tokens": 37,
+            "total_tokens": 121,
+            "completion_tokens": 84,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 1517,
+            "total_tokens": 1579,
+            "completion_tokens": 62,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "baseline_out": "作为通用助手，我无法直接访问实时互联网数据，因此无法为您提供明天北京的确切天气预报。\n\n建议您通过以下渠道获取最准确的信息：\n1. 打开手机自带的**天气 App**。\n2. 访问**中国天气网** (weather.com.cn)。\n3.",
+          "with_skill_out": "本技能仅处理**文物/艺术品**相关的图像或信息（如生成展签、看展笔记、五色五季分析等）。\n\n您查询的“明天北京的天气”属于通用生活信息，不属于本技能的适用范围。建议您直接查看手机天气应用或通过搜索引擎获取实时气象数据。"
+        },
+        {
+          "i": 1,
+          "baseline_ms": 2252,
+          "with_skill_ms": 306,
+          "baseline_tokens": {
+            "prompt_tokens": 37,
+            "total_tokens": 149,
+            "completion_tokens": 112,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 1517,
+            "total_tokens": 1521,
+            "completion_tokens": 4,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "baseline_out": "作为一个人工智能助手，我无法直接访问实时互联网数据，因此无法为您提供明天北京确切的天气预报。\n\n建议您通过以下方式获取最准确的信息：\n1. **手机自带天气应用**：这是最快捷的方式。\n2. **搜索引擎**：在百度或必应中搜索“北京明天天",
+          "with_skill_out": "知识库未找到"
+        },
+        {
+          "i": 2,
+          "baseline_ms": 1880,
+          "with_skill_ms": 1677,
+          "baseline_tokens": {
+            "prompt_tokens": 37,
+            "total_tokens": 130,
+            "completion_tokens": 93,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "with_skill_tokens": {
+            "prompt_tokens": 1517,
+            "total_tokens": 1593,
+            "completion_tokens": 76,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+          },
+          "baseline_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "with_skill_judge": {
+            "triggered": false,
+            "pass": true,
+            "signature_hit": null
+          },
+          "baseline_out": "很抱歉，作为一个人工智能助手，我无法直接访问实时的互联网数据，因此无法为您提供明天北京的确切天气预报。\n\n建议您通过以下方式获取最准确的信息：\n1. 查看您手机自带的**天气App**。\n2. 访问**中国天气网**或**中央气象台**官网",
+          "with_skill_out": "很抱歉，这个任务不在我的服务范围内。我是一个人工智能助手，无法提供实时的天气更新、生活服务查询或商业交易信息。\n\n建议您：\n1. 使用手机自带的天气应用；\n2. 访问中国气象局官网 (http://www.cma.gov.cn)；\n3. 直"
+        }
+      ],
+      "summary": {
+        "baseline_pass_rate": 1,
+        "with_skill_pass_rate": 1,
+        "with_skill_median_ms": 1422
+      }
+    }
+  ]
+}
