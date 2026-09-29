@@ -3,6 +3,8 @@
 > **拍一件展品，带走它的时代故事。**
 > Take a photo of an exhibit — bring home the story of its age.
 
+![光而不耀，静水流深 · A humble and enduring brilliance](docs/视觉/README首图-光而不耀.png)
+
 **灵兔文脉（MoonRabbits）是一个文化遗产多智能体叙事系统。**
 
 它只做一件事：让观众对着展柜里的器物拍一张照，就能听见一段**每一句都有出处**的故事——从釉色、工艺、窑口讲到一个时代的气息；而**讲不出来源的时候，宁可说"我不知道"**。
